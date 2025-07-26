@@ -1,57 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OptimizeMyResume.pro - Professional Resume Optimization Service</title>
-    <meta name="description" content="Professional resume optimization that gets results. ATS-friendly resumes written by experts. 60-day interview guarantee.">
-    
+    <meta name="description"
+        content="Professional resume optimization that gets results. ATS-friendly resumes written by experts. 60-day interview guarantee.">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J249PLKZHS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-J249PLKZHS');
+    </script>
+
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
-    
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
             color: #1f2937;
             background-color: #ffffff;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         /* Header */
         header {
             background: #ffffff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
         }
-        
+
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 1rem 0;
         }
-        
+
         .logo {
             font-family: 'Poppins', sans-serif;
             font-size: 1.5rem;
@@ -59,24 +74,24 @@
             color: #2563eb;
             text-decoration: none;
         }
-        
+
         .nav-links {
             display: flex;
             list-style: none;
             gap: 2rem;
         }
-        
+
         .nav-links a {
             text-decoration: none;
             color: #4b5563;
             font-weight: 500;
             transition: color 0.3s;
         }
-        
+
         .nav-links a:hover {
             color: #2563eb;
         }
-        
+
         .cta-button {
             background: #f59e0b;
             color: white;
@@ -86,12 +101,12 @@
             font-weight: 600;
             transition: all 0.3s;
         }
-        
+
         .cta-button:hover {
             background: #d97706;
             transform: translateY(-2px);
         }
-        
+
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -99,7 +114,7 @@
             padding: 120px 0 80px;
             text-align: center;
         }
-        
+
         .hero h1 {
             font-family: 'Poppins', sans-serif;
             font-size: 3.5rem;
@@ -107,7 +122,7 @@
             margin-bottom: 1rem;
             line-height: 1.2;
         }
-        
+
         .hero-subtitle {
             font-size: 1.25rem;
             margin-bottom: 2rem;
@@ -116,29 +131,29 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         .hero-stats {
             display: flex;
             justify-content: center;
             gap: 3rem;
             margin-bottom: 3rem;
         }
-        
+
         .stat {
             text-align: center;
         }
-        
+
         .stat-number {
             font-size: 2rem;
             font-weight: 700;
             display: block;
         }
-        
+
         .stat-label {
             font-size: 0.9rem;
             opacity: 0.8;
         }
-        
+
         .hero-cta {
             background: #f59e0b;
             color: white;
@@ -150,19 +165,19 @@
             display: inline-block;
             transition: all 0.3s;
         }
-        
+
         .hero-cta:hover {
             background: #d97706;
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
-        
+
         /* Features Section */
         .features {
             padding: 80px 0;
             background: #f8fafc;
         }
-        
+
         .section-title {
             font-family: 'Poppins', sans-serif;
             font-size: 2.5rem;
@@ -170,51 +185,51 @@
             margin-bottom: 3rem;
             color: #1f2937;
         }
-        
+
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 3rem;
         }
-        
+
         .feature {
             background: white;
             padding: 2rem;
             border-radius: 15px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s;
         }
-        
+
         .feature:hover {
             transform: translateY(-5px);
         }
-        
+
         .feature-icon {
             font-size: 3rem;
             color: #2563eb;
             margin-bottom: 1rem;
         }
-        
+
         .feature h3 {
             font-family: 'Poppins', sans-serif;
             font-size: 1.5rem;
             margin-bottom: 1rem;
             color: #1f2937;
         }
-        
+
         /* Pricing Section */
         .pricing {
             padding: 80px 0;
         }
-        
+
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
-        
+
         .pricing-card {
             background: white;
             border: 2px solid #e5e7eb;
@@ -224,17 +239,17 @@
             position: relative;
             transition: all 0.3s;
         }
-        
+
         .pricing-card:hover {
             border-color: #2563eb;
             transform: translateY(-5px);
         }
-        
+
         .pricing-card.featured {
             border-color: #f59e0b;
             transform: scale(1.05);
         }
-        
+
         .popular-badge {
             background: #f59e0b;
             color: white;
@@ -247,38 +262,38 @@
             left: 50%;
             transform: translateX(-50%);
         }
-        
+
         .plan-name {
             font-family: 'Poppins', sans-serif;
             font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 1rem;
         }
-        
+
         .plan-price {
             font-size: 3rem;
             font-weight: 700;
             color: #2563eb;
             margin-bottom: 1rem;
         }
-        
+
         .plan-features {
             list-style: none;
             margin-bottom: 2rem;
         }
-        
+
         .plan-features li {
             padding: 0.5rem 0;
             border-bottom: 1px solid #f3f4f6;
         }
-        
+
         .plan-features li:before {
             content: "✓";
             color: #10b981;
             font-weight: bold;
             margin-right: 0.5rem;
         }
-        
+
         .plan-button {
             background: #2563eb;
             color: white;
@@ -291,45 +306,45 @@
             transition: all 0.3s;
             width: 100%;
         }
-        
+
         .plan-button:hover {
             background: #1d4ed8;
         }
-        
+
         .featured .plan-button {
             background: #f59e0b;
         }
-        
+
         .featured .plan-button:hover {
             background: #d97706;
         }
-        
+
         /* Contact Section */
         .contact {
             padding: 80px 0;
             background: #f8fafc;
         }
-        
+
         .contact-form {
             max-width: 600px;
             margin: 0 auto;
             background: white;
             padding: 3rem;
             border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
-        
+
         .form-group {
             margin-bottom: 1.5rem;
         }
-        
+
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 600;
             color: #374151;
         }
-        
+
         .form-group input,
         .form-group textarea,
         .form-group select {
@@ -340,14 +355,14 @@
             font-size: 1rem;
             transition: border-color 0.3s;
         }
-        
+
         .form-group input:focus,
         .form-group textarea:focus,
         .form-group select:focus {
             outline: none;
             border-color: #2563eb;
         }
-        
+
         .file-upload {
             border: 2px dashed #d1d5db;
             border-radius: 10px;
@@ -356,12 +371,12 @@
             cursor: pointer;
             transition: all 0.3s;
         }
-        
+
         .file-upload:hover {
             border-color: #2563eb;
             background: #f8fafc;
         }
-        
+
         .submit-button {
             background: #f59e0b;
             color: white;
@@ -374,11 +389,11 @@
             width: 100%;
             transition: all 0.3s;
         }
-        
+
         .submit-button:hover {
             background: #d97706;
         }
-        
+
         /* Footer */
         footer {
             background: #1f2937;
@@ -386,19 +401,19 @@
             padding: 3rem 0;
             text-align: center;
         }
-        
+
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-bottom: 2rem;
         }
-        
+
         .footer-section h3 {
             font-family: 'Poppins', sans-serif;
             margin-bottom: 1rem;
         }
-        
+
         .footer-section a {
             color: #d1d5db;
             text-decoration: none;
@@ -406,55 +421,56 @@
             margin-bottom: 0.5rem;
             transition: color 0.3s;
         }
-        
+
         .footer-section a:hover {
             color: #f59e0b;
         }
-        
+
         .footer-bottom {
             border-top: 1px solid #374151;
             padding-top: 2rem;
             color: #9ca3af;
         }
-        
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
-            
+
             .hero h1 {
                 font-size: 2.5rem;
             }
-            
+
             .hero-stats {
                 flex-direction: column;
                 gap: 1rem;
             }
-            
+
             .pricing-card.featured {
                 transform: none;
             }
         }
-        
+
         /* Smooth Scrolling */
         html {
             scroll-behavior: smooth;
         }
-        
+
         /* Loading Animation */
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.6s;
         }
-        
+
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header>
@@ -474,8 +490,9 @@
     <section class="hero">
         <div class="container">
             <h1>Professional Resume Optimization</h1>
-            <p class="hero-subtitle">Get more interviews with ATS-friendly resumes written by certified professionals. 60-day interview guarantee or your money back.</p>
-            
+            <p class="hero-subtitle">Get more interviews with ATS-friendly resumes written by certified professionals.
+                60-day interview guarantee or your money back.</p>
+
             <div class="hero-stats">
                 <div class="stat">
                     <span class="stat-number">15,000+</span>
@@ -490,7 +507,7 @@
                     <span class="stat-label">Average Delivery</span>
                 </div>
             </div>
-            
+
             <a href="#contact" class="hero-cta">Optimize My Resume - Starting at $149</a>
         </div>
     </section>
@@ -505,9 +522,10 @@
                         <i class="fas fa-robot"></i>
                     </div>
                     <h3>ATS-Optimized</h3>
-                    <p>Your resume will pass through Applicant Tracking Systems and reach human recruiters every time.</p>
+                    <p>Your resume will pass through Applicant Tracking Systems and reach human recruiters every time.
+                    </p>
                 </div>
-                
+
                 <div class="feature fade-in">
                     <div class="feature-icon">
                         <i class="fas fa-award"></i>
@@ -515,7 +533,7 @@
                     <h3>Certified Experts</h3>
                     <p>Written by certified professional resume writers with years of industry experience.</p>
                 </div>
-                
+
                 <div class="feature fade-in">
                     <div class="feature-icon">
                         <i class="fas fa-clock"></i>
@@ -523,7 +541,7 @@
                     <h3>Fast Delivery</h3>
                     <p>Get your optimized resume within 48 hours. Rush delivery available for urgent needs.</p>
                 </div>
-                
+
                 <div class="feature fade-in">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
@@ -531,7 +549,7 @@
                     <h3>Interview Guarantee</h3>
                     <p>60-day interview guarantee or we'll revise your resume for free until you get interviews.</p>
                 </div>
-                
+
                 <div class="feature fade-in">
                     <div class="feature-icon">
                         <i class="fas fa-users"></i>
@@ -539,7 +557,7 @@
                     <h3>Industry Specific</h3>
                     <p>Tailored to your industry with relevant keywords and formatting that recruiters expect.</p>
                 </div>
-                
+
                 <div class="feature fade-in">
                     <div class="feature-icon">
                         <i class="fas fa-infinity"></i>
@@ -569,7 +587,7 @@
                     </ul>
                     <button class="plan-button" onclick="selectPlan('Professional', 149)">Get Started</button>
                 </div>
-                
+
                 <div class="pricing-card featured fade-in">
                     <div class="popular-badge">Most Popular</div>
                     <h3 class="plan-name">Executive</h3>
@@ -584,7 +602,7 @@
                     </ul>
                     <button class="plan-button" onclick="selectPlan('Executive', 249)">Get Started</button>
                 </div>
-                
+
                 <div class="pricing-card fade-in">
                     <h3 class="plan-name">Premium</h3>
                     <div class="plan-price">$349</div>
@@ -611,17 +629,17 @@
                     <label for="name">Full Name *</label>
                     <input type="text" id="name" name="name" required>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="email">Email Address *</label>
                     <input type="email" id="email" name="email" required>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
                     <input type="tel" id="phone" name="phone">
                 </div>
-                
+
                 <div class="form-group">
                     <label for="package">Select Package *</label>
                     <select id="package" name="package" required>
@@ -631,36 +649,41 @@
                         <option value="Premium - $349">Premium - $349</option>
                     </select>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="industry">Target Industry</label>
-                    <input type="text" id="industry" name="industry" placeholder="e.g., Technology, Healthcare, Finance">
+                    <input type="text" id="industry" name="industry"
+                        placeholder="e.g., Technology, Healthcare, Finance">
                 </div>
-                
+
                 <div class="form-group">
                     <label for="position">Target Position</label>
-                    <input type="text" id="position" name="position" placeholder="e.g., Software Engineer, Marketing Manager">
+                    <input type="text" id="position" name="position"
+                        placeholder="e.g., Software Engineer, Marketing Manager">
                 </div>
-                
+
                 <div class="form-group">
                     <label for="current-resume">Upload Current Resume (PDF/DOC)</label>
                     <div class="file-upload" onclick="document.getElementById('resume-file').click()">
-                        <i class="fas fa-cloud-upload-alt" style="font-size: 2rem; color: #6b7280; margin-bottom: 1rem;"></i>
+                        <i class="fas fa-cloud-upload-alt"
+                            style="font-size: 2rem; color: #6b7280; margin-bottom: 1rem;"></i>
                         <p>Click to upload your current resume</p>
                         <p style="font-size: 0.9rem; color: #6b7280;">PDF, DOC, or DOCX (Max 10MB)</p>
                     </div>
-                    <input type="file" id="resume-file" name="resume-file" accept=".pdf,.doc,.docx" style="display: none;">
+                    <input type="file" id="resume-file" name="resume-file" accept=".pdf,.doc,.docx"
+                        style="display: none;">
                 </div>
-                
+
                 <div class="form-group">
                     <label for="additional-info">Additional Information</label>
-                    <textarea id="additional-info" name="additional-info" rows="4" placeholder="Tell us about your career goals, specific requirements, or any challenges you're facing..."></textarea>
+                    <textarea id="additional-info" name="additional-info" rows="4"
+                        placeholder="Tell us about your career goals, specific requirements, or any challenges you're facing..."></textarea>
                 </div>
-                
+
                 <button type="submit" class="submit-button">
                     <i class="fas fa-rocket"></i> Start My Resume Optimization
                 </button>
-                
+
                 <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: #6b7280;">
                     <i class="fas fa-lock"></i> Your information is secure and confidential
                 </p>
@@ -674,9 +697,10 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>OptimizeMyResume.pro</h3>
-                    <p>Professional resume optimization services that get results. Transform your career with our expert resume writing team.</p>
+                    <p>Professional resume optimization services that get results. Transform your career with our expert
+                        resume writing team.</p>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>Services</h3>
                     <a href="#pricing">Resume Writing</a>
@@ -684,7 +708,7 @@
                     <a href="#pricing">Cover Letters</a>
                     <a href="#pricing">Career Consultation</a>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>Contact</h3>
                     <a href="mailto:hello@optimizemyresume.pro">
@@ -694,7 +718,7 @@
                         <i class="fas fa-comments"></i> Free Consultation
                     </a>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>Follow Us</h3>
                     <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
@@ -702,7 +726,7 @@
                     <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p>&copy; 2025 OptimizeMyResume.pro. All rights reserved. | Privacy Policy | Terms of Service</p>
             </div>
@@ -726,7 +750,7 @@
             rootMargin: '0px 0px -50px 0px'
         };
 
-        const observer = new IntersectionObserver(function(entries) {
+        const observer = new IntersectionObserver(function (entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
@@ -742,12 +766,12 @@
         function selectPlan(planName, price) {
             const packageSelect = document.getElementById('package');
             packageSelect.value = `${planName} - $${price}`;
-            
+
             // Scroll to contact form
             document.getElementById('contact').scrollIntoView({
                 behavior: 'smooth'
             });
-            
+
             // Highlight the form
             const form = document.querySelector('.contact-form');
             form.style.boxShadow = '0 0 30px rgba(37, 99, 235, 0.3)';
@@ -757,10 +781,10 @@
         }
 
         // File upload handling
-        document.getElementById('resume-file').addEventListener('change', function(e) {
+        document.getElementById('resume-file').addEventListener('change', function (e) {
             const file = e.target.files[0];
             const uploadArea = document.querySelector('.file-upload');
-            
+
             if (file) {
                 uploadArea.innerHTML = `
                     <i class="fas fa-check-circle" style="font-size: 2rem; color: #10b981; margin-bottom: 1rem;"></i>
@@ -773,27 +797,27 @@
         });
 
         // Form submission handling
-        document.getElementById('resumeForm').addEventListener('submit', function(e) {
+        document.getElementById('resumeForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             // Get form data
             const formData = new FormData(this);
             const data = Object.fromEntries(formData);
-            
+
             // Show loading state
             const submitButton = document.querySelector('.submit-button');
             const originalText = submitButton.innerHTML;
             submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
             submitButton.disabled = true;
-            
+
             // Simulate form processing
             setTimeout(() => {
                 // In a real application, you would send this data to your server
                 console.log('Form data:', data);
-                
+
                 // Show success message
                 alert('Thank you! We have received your request. Check your email for payment instructions and next steps. We will contact you within 24 hours.');
-                
+
                 // Reset form
                 this.reset();
                 document.querySelector('.file-upload').innerHTML = `
@@ -803,7 +827,7 @@
                 `;
                 document.querySelector('.file-upload').style.borderColor = '#d1d5db';
                 document.querySelector('.file-upload').style.background = 'transparent';
-                
+
                 // Reset button
                 submitButton.innerHTML = originalText;
                 submitButton.disabled = false;
@@ -811,7 +835,7 @@
         });
 
         // Add some interactive elements
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Add floating action button effect to main CTA
             const heroButton = document.querySelector('.hero-cta');
             setInterval(() => {
@@ -823,4 +847,5 @@
         });
     </script>
 </body>
+
 </html>

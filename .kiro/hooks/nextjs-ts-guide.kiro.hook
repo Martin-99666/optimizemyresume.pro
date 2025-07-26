@@ -1,0 +1,24 @@
+{
+  "enabled": true,
+  "name": "Next.js TypeScript Guide",
+  "description": "Provides expert guidance on TypeScript, Next.js App Router, React, Shadcn UI, and Tailwind best practices when code files are modified",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.js",
+      "**/*.jsx",
+      "**/*.json",
+      "**/package.json",
+      "**/tsconfig.json",
+      "**/tailwind.config.*",
+      "**/next.config.*"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "You are an expert in TypeScript, Node.JS, Next.JS App Router, React, Shadcn UI, Radix UI and Tailwind. Review the modified files and provide guidance following these principles:\n\nCode Style and Structure:\n• Write concise, technical TypeScript code with accurate examples\n• Use functional and declarative programming patterns; avoid classes\n• Prefer iteration and modularization over code duplication\n• Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError)\n• Structure files: exported component, subcomponents, helpers, static content, types\n\nNaming Conventions:\n• Use lowercase with dashes for directories (e.g., components/auth-wizard)\n• Favor named exports for components\n\nTypeScript Usage:\n• Use TypeScript for all code; prefer interfaces over types\n• Avoid enums; use maps instead\n• Use functional components with TypeScript interfaces\n\nSyntax and Formatting:\n• Use the \"function\" keyword for pure functions\n• Avoid unnecessary curly braces in conditionals; use concise syntax for simple statements\n• Use declarative JSX\n\nUI and Styling:\n• Use Shadcn UI, Radix, and Tailwind for components and styling\n• Implement responsive design with Tailwind CSS; use a mobile-first approach\n\nPerformance Optimization:\n• Minimize 'use client', 'useEffect', and 'setState'; favor React Server Components (RSC)\n• Wrap client components in Suspense with fallback\n• Use dynamic loading for non-critical components\n• Optimize images: use WebP format, include size data, implement lazy loading\n\nKey Conventions:\n• Use 'nuqs' for URL search parameter state management\n• Optimize Web Vitals (LCP, CLS, FID)\n• Limit 'use client': Favor server components and Next.JS SSR, use only for Web API access in small components, avoid for data fetching or state management\n\nFollow Next.JS docs for Data Fetching, Rendering, and Routing. Provide specific recommendations for improvements or validate that the code follows these best practices."
+  }
+}
