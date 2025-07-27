@@ -796,27 +796,90 @@
             }
         });
 
-        // Form submission handling
-        document.getElementById('resumeForm').addEventListener('submit', function (e) {
-            e.preventDefault();
+        // API configuration
+        const API_BASE_URL = 'http://localhost:3001/api';
 
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
+        // Form submission handling
+        document.getElementById('resumeForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
 
             // Show loading state
             const submitButton = document.querySelector('.submit-button');
             const originalText = submitButton.innerHTML;
-            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating Order...';
             submitButton.disabled = true;
 
-            // Simulate form processing
-            setTimeout(() => {
-                // In a real application, you would send this data to your server
-                console.log('Form data:', data);
+            try {
+                // Prepare form data
+                const formData = new FormData();
+                formData.append('name', document.getElementById('name').value);
+                formData.append('email', document.getElementById('email').value);
+                formData.append('phone', document.getElementById('phone').value);
+                formData.append('package', document.getElementById('package').value);
+                formData.append('industry', document.getElementById('industry').value);
+                formData.append('position', document.getElementById('position').value);
+                formData.append('additional-info', document.getElementById('additional-info').value);
 
-                // Show success message
-                alert('Thank you! We have received your request. Check your email for payment instructions and next steps. We will contact you within 24 hours.');
+                // Create order
+                const orderResponse = await fetch(`${API_BASE_URL}/orders`, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const orderResult = await orderResponse.json();
+
+                if (!orderResponse.ok) {
+                    throw new Error(orderResult.message || 'Failed to create order');
+                }
+
+                // Upload resume file if selected
+                const resumeFile = document.getElementById('resume-file').files[0];
+                if (resumeFile) {
+                    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Uploading Resume...';
+                    
+                    const uploadFormData = new FormData();
+                    uploadFormData.append('resume-file', resumeFile);
+                    uploadFormData.append('orderId', orderResult.data.orderId);
+
+                    const uploadResponse = await fetch(`${API_BASE_URL}/upload/resume`, {
+                        method: 'POST',
+                        body: uploadFormData
+                    });
+
+                    if (!uploadResponse.ok) {
+                        console.warn('Resume upload failed, but order was created');
+                    }
+                }
+
+                // Create payment intent
+                submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Setting up Payment...';
+                
+                const paymentResponse = await fetch(`${API_BASE_URL}/payments/create-payment-intent`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        orderId: orderResult.data.orderId
+                    })
+                });
+
+                const paymentResult = await paymentResponse.json();
+
+                if (!paymentResponse.ok) {
+                    throw new Error(paymentResult.message || 'Failed to setup payment');
+                }
+
+                // Show success message with order details
+                alert(`Order created successfully!
+
+Order Number: ${orderResult.data.orderNumber}
+Package: ${document.getElementById('package').value}
+Amount: $${orderResult.data.packagePrice}
+
+You will receive an email with payment instructions shortly. Please check your email to complete the payment process.
+
+You can track your order at any time using your order number.`);
 
                 // Reset form
                 this.reset();
@@ -828,10 +891,16 @@
                 document.querySelector('.file-upload').style.borderColor = '#d1d5db';
                 document.querySelector('.file-upload').style.background = 'transparent';
 
+            } catch (error) {
+                console.error('Form submission error:', error);
+                alert(`Error: ${error.message}
+
+Please try again or contact support if the problem persists.`);
+            } finally {
                 // Reset button
                 submitButton.innerHTML = originalText;
                 submitButton.disabled = false;
-            }, 2000);
+            }
         });
 
         // Add some interactive elements
