@@ -1035,110 +1035,96 @@
         });
 
         // API configuration
-        const API_BASE_URL = 'http://localhost:3001/api';
-
-        // Form submission handling
-        document.getElementById('resumeForm').addEventListener('submit', async function (e) {
+        // Form submission handling - Static website contact form
+        document.getElementById('resumeForm').addEventListener('submit', function (e) {
             e.preventDefault();
 
             // Show loading state
             const submitButton = document.querySelector('.submit-button');
             const originalText = submitButton.innerHTML;
-            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating Order...';
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
             submitButton.disabled = true;
 
-            try {
-                // Prepare form data
-                const formData = new FormData();
-                formData.append('name', document.getElementById('name').value);
-                formData.append('email', document.getElementById('email').value);
-                formData.append('phone', document.getElementById('phone').value);
-                formData.append('package', document.getElementById('package').value);
-                formData.append('industry', document.getElementById('industry').value);
-                formData.append('position', document.getElementById('position').value);
-                formData.append('additional-info', document.getElementById('additional-info').value);
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                package: document.getElementById('package').value,
+                industry: document.getElementById('industry').value,
+                position: document.getElementById('position').value,
+                additionalInfo: document.getElementById('additional-info').value,
+                timestamp: new Date().toISOString()
+            };
 
-                // Create order
-                const orderResponse = await fetch(`${API_BASE_URL}/orders`, {
-                    method: 'POST',
-                    body: formData
-                });
+            // Check for resume file
+            const resumeFile = document.getElementById('resume-file').files[0];
+            const hasResume = resumeFile ? `Yes (${resumeFile.name})` : 'No';
 
-                const orderResult = await orderResponse.json();
+            // Create mailto link with form data
+            const subject = encodeURIComponent(`New Resume Order - ${formData.package}`);
+            const body = encodeURIComponent(`New Resume Optimization Order
 
-                if (!orderResponse.ok) {
-                    throw new Error(orderResult.message || 'Failed to create order');
-                }
+Client Information:
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
 
-                // Upload resume file if selected
-                const resumeFile = document.getElementById('resume-file').files[0];
-                if (resumeFile) {
-                    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Uploading Resume...';
-                    
-                    const uploadFormData = new FormData();
-                    uploadFormData.append('resume-file', resumeFile);
-                    uploadFormData.append('orderId', orderResult.data.orderId);
+Service Details:
+Package: ${formData.package}
+Target Industry: ${formData.industry}
+Target Position: ${formData.position}
+Resume File: ${hasResume}
 
-                    const uploadResponse = await fetch(`${API_BASE_URL}/upload/resume`, {
-                        method: 'POST',
-                        body: uploadFormData
-                    });
+Additional Information:
+${formData.additionalInfo}
 
-                    if (!uploadResponse.ok) {
-                        console.warn('Resume upload failed, but order was created');
-                    }
-                }
+Order Date: ${new Date().toLocaleString()}
 
-                // Create payment intent
-                submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Setting up Payment...';
-                
-                const paymentResponse = await fetch(`${API_BASE_URL}/payments/create-payment-intent`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        orderId: orderResult.data.orderId
-                    })
-                });
+---
+Please process this order and contact the client for payment and next steps.`);
 
-                const paymentResult = await paymentResponse.json();
+            const mailtoLink = `mailto:jiangbao00000@gmail.com?subject=${subject}&body=${body}`;
 
-                if (!paymentResponse.ok) {
-                    throw new Error(paymentResult.message || 'Failed to setup payment');
-                }
+            // Show success message
+            setTimeout(() => {
+                alert(`Order Request Submitted Successfully! 🎉
 
-                // Show success message with order details
-                alert(`Order created successfully!
+We have received your resume optimization request for: ${formData.package}
 
-Order Number: ${orderResult.data.orderNumber}
-Package: ${document.getElementById('package').value}
-Amount: $${orderResult.data.packagePrice}
+Next Steps:
+1. Check your email for our confirmation message
+2. We will contact you within 24 hours to confirm details
+3. Payment instructions will be provided via email
+4. Your optimized resume will be delivered within 3-5 business days
 
-You will receive an email with payment instructions shortly. Please check your email to complete the payment process.
+Order Details:
+- Package: ${formData.package}
+- Industry: ${formData.industry || 'Not specified'}
+- Position: ${formData.position || 'Not specified'}
+- Resume File: ${hasResume}
 
-You can track your order at any time using your order number.`);
+Thank you for choosing OptimizeMyResume.pro!`);
 
-                // Reset form
-                this.reset();
-                document.querySelector('.file-upload').innerHTML = `
-                    <i class="fas fa-cloud-upload-alt" style="font-size: 2rem; color: #6b7280; margin-bottom: 1rem;"></i>
-                    <p>Click to upload your current resume</p>
-                    <p style="font-size: 0.9rem; color: #6b7280;">PDF, DOC, or DOCX (Max 10MB)</p>
-                `;
-                document.querySelector('.file-upload').style.borderColor = '#d1d5db';
-                document.querySelector('.file-upload').style.background = 'transparent';
+                // Open email client
+                window.location.href = mailtoLink;
 
-            } catch (error) {
-                console.error('Form submission error:', error);
-                alert(`Error: ${error.message}
+                // Reset form after short delay
+                setTimeout(() => {
+                    document.getElementById('resumeForm').reset();
+                    document.querySelector('.file-upload').innerHTML = `
+                        <i class="fas fa-cloud-upload-alt" style="font-size: 2rem; color: #6b7280; margin-bottom: 1rem;"></i>
+                        <p>Click to upload your current resume</p>
+                        <p style="font-size: 0.9rem; color: #6b7280;">PDF, DOC, or DOCX (Max 10MB)</p>
+                    `;
+                    document.querySelector('.file-upload').style.borderColor = '#d1d5db';
+                    document.querySelector('.file-upload').style.backgroundColor = 'transparent';
+                }, 1000);
 
-Please try again or contact support if the problem persists.`);
-            } finally {
                 // Reset button
                 submitButton.innerHTML = originalText;
                 submitButton.disabled = false;
-            }
+            }, 800);
         });
 
         // Add some interactive elements
