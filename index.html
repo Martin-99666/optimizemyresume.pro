@@ -50,6 +50,20 @@
 
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Multi-language support CSS -->
+    <link rel="stylesheet" href="/css/language-switcher.css">
+    
+    <!-- Hreflang for SEO -->
+    <link rel="alternate" hreflang="en" href="https://optimizemyresume.pro/" />
+    <link rel="alternate" hreflang="de" href="https://optimizemyresume.pro/" />
+    <link rel="alternate" hreflang="it" href="https://optimizemyresume.pro/" />
+    <link rel="alternate" hreflang="fr" href="https://optimizemyresume.pro/" />
+    <link rel="alternate" hreflang="es" href="https://optimizemyresume.pro/" />
+    <link rel="alternate" hreflang="ja" href="https://optimizemyresume.pro/" />
+    <link rel="alternate" hreflang="ko" href="https://optimizemyresume.pro/" />
+    <link rel="alternate" hreflang="zh" href="https://optimizemyresume.pro/" />
+    <link rel="alternate" hreflang="x-default" href="https://optimizemyresume.pro/" />
 
     <!-- Structured Data - Organization Schema -->
     <script type="application/ld+json">
@@ -691,14 +705,14 @@
         <nav class="container">
             <a href="/" class="logo" aria-label="OptimizeMyResume.pro Homepage">OptimizeMyResume.pro</a>
             <ul class="nav-links">
-                <li><a href="#services" aria-label="Our Services">Services</a></li>
-                <li><a href="#pricing" aria-label="Pricing Plans">Pricing</a></li>
-                <li><a href="#samples" aria-label="Resume Samples">Samples</a></li>
+                <li><a href="#services" aria-label="Our Services" data-i18n="nav.services">Services</a></li>
+                <li><a href="#pricing" aria-label="Pricing Plans" data-i18n="nav.pricing">Pricing</a></li>
+                <li><a href="#samples" aria-label="Resume Samples" data-i18n="nav.samples">Samples</a></li>
                 <li><a href="#testimonials" aria-label="Customer Reviews">Reviews</a></li>
                 <li><a href="#faq" aria-label="Frequently Asked Questions">FAQ</a></li>
-                <li><a href="#contact" aria-label="Contact Us">Contact</a></li>
+                <li><a href="#contact" aria-label="Contact Us" data-i18n="nav.contact">Contact</a></li>
             </ul>
-            <a href="#contact" class="cta-button" aria-label="Start Your Resume Optimization">Get Started</a>
+            <a href="#contact" class="cta-button" aria-label="Start Your Resume Optimization" data-i18n="nav.get-started">Get Started</a>
         </nav>
     </header>
 
@@ -727,33 +741,36 @@
         <!-- Hero Section -->
         <section id="hero" class="hero">
             <div class="container">
-                <h1>Professional Resume Optimization</h1>
-                <p class="hero-subtitle">Get more interviews with <a href="#services" class="inline-link">ATS-friendly resumes</a> written by <a href="#about-experts" class="inline-link">certified professionals</a>.
-                    <strong><a href="#pricing" class="inline-link">60-day interview guarantee</a></strong> or your money back.</p>
+                <h1 data-i18n="hero.title">Professional Resume Optimization That Gets Results</h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">ATS-friendly resumes written by certified experts. 60-day interview guarantee. Get more interviews, land better jobs.</p>
 
             <div class="hero-stats">
                 <div class="stat">
                     <span class="stat-number">15,000+</span>
-                    <span class="stat-label">Satisfied Clients</span>
+                    <span class="stat-label" data-i18n="stats.resumes">Resumes Optimized</span>
                 </div>
                 <div class="stat">
                     <span class="stat-number">94%</span>
-                    <span class="stat-label">Interview Rate</span>
+                    <span class="stat-label" data-i18n="stats.interviews">Interview Rate</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number">48hrs</span>
-                    <span class="stat-label">Average Delivery</span>
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label" data-i18n="stats.satisfaction">Client Satisfaction</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">60</span>
+                    <span class="stat-label" data-i18n="stats.guarantee">Days Guarantee</span>
                 </div>
             </div>
 
-            <a href="#contact" class="hero-cta">Optimize My Resume - Starting at $149</a>
+            <a href="#contact" class="hero-cta" data-i18n="hero.cta">Get Your Optimized Resume</a>
         </div>
     </section>
 
     <!-- Features Section -->
     <section class="features section-anchor" id="services">
         <div class="container">
-            <h2 class="section-title">Why Choose OptimizeMyResume.pro?</h2>
+            <h2 class="section-title" data-i18n="services.title">Professional Resume Services</h2>
             <div class="features-grid">
                 <div class="feature fade-in">
                     <div class="feature-icon">
@@ -810,10 +827,10 @@
     <!-- Pricing Section -->
     <section class="pricing" id="pricing">
         <div class="container">
-            <h2 class="section-title">Choose Your Success Package</h2>
+            <h2 class="section-title" data-i18n="pricing.title">Choose Your Package</h2>
             <div class="pricing-grid">
                 <div class="pricing-card fade-in">
-                    <h3 class="plan-name">Professional</h3>
+                    <h3 class="plan-name" data-i18n="pricing.professional">Professional</h3>
                     <div class="plan-price">$149</div>
                     <ul class="plan-features">
                         <li>ATS-Optimized Resume</li>
@@ -823,12 +840,12 @@
                         <li>48-Hour Delivery</li>
                         <li>60-Day Interview Guarantee</li>
                     </ul>
-                    <button class="plan-button" onclick="selectPlan('Professional', 149)">Get Started</button>
+                    <button class="plan-button" onclick="selectPlan('Professional', 149)" data-i18n="pricing.select-package">Select This Package</button>
                 </div>
 
                 <div class="pricing-card featured fade-in">
-                    <div class="popular-badge">Most Popular</div>
-                    <h3 class="plan-name">Executive</h3>
+                    <div class="popular-badge" data-i18n="pricing.most-popular">Most Popular</div>
+                    <h3 class="plan-name" data-i18n="pricing.executive">Executive</h3>
                     <div class="plan-price">$249</div>
                     <ul class="plan-features">
                         <li>Everything in Professional</li>
@@ -838,11 +855,11 @@
                         <li>24-Hour Rush Delivery</li>
                         <li>Priority Customer Support</li>
                     </ul>
-                    <button class="plan-button" onclick="selectPlan('Executive', 249)">Get Started</button>
+                    <button class="plan-button" onclick="selectPlan('Executive', 249)" data-i18n="pricing.select-package">Select This Package</button>
                 </div>
 
                 <div class="pricing-card fade-in">
-                    <h3 class="plan-name">Premium</h3>
+                    <h3 class="plan-name" data-i18n="pricing.premium">Premium</h3>
                     <div class="plan-price">$349</div>
                     <ul class="plan-features">
                         <li>Everything in Executive</li>
@@ -852,7 +869,7 @@
                         <li>Thank You Letter Template</li>
                         <li>90-Day Job Search Support</li>
                     </ul>
-                    <button class="plan-button" onclick="selectPlan('Premium', 349)">Get Started</button>
+                    <button class="plan-button" onclick="selectPlan('Premium', 349)" data-i18n="pricing.select-package">Select This Package</button>
                 </div>
             </div>
         </div>
@@ -861,64 +878,61 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title">Get Your Optimized Resume Today</h2>
+            <h2 class="section-title" data-i18n="contact.title">Get Your Optimized Resume Today</h2>
             <form class="contact-form" id="resumeForm">
                 <div class="form-group">
-                    <label for="name">Full Name *</label>
+                    <label for="name" data-i18n="form.full-name">Full Name *</label>
                     <input type="text" id="name" name="name" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Email Address *</label>
+                    <label for="email" data-i18n="form.email">Email Address *</label>
                     <input type="email" id="email" name="email" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="phone">Phone Number</label>
+                    <label for="phone" data-i18n="form.phone">Phone Number</label>
                     <input type="tel" id="phone" name="phone">
                 </div>
 
                 <div class="form-group">
-                    <label for="package">Select Package *</label>
+                    <label for="package" data-i18n="form.package">Select Package *</label>
                     <select id="package" name="package" required>
-                        <option value="">Choose a package</option>
-                        <option value="Professional - $149">Professional - $149</option>
-                        <option value="Executive - $249">Executive - $249 (Most Popular)</option>
-                        <option value="Premium - $349">Premium - $349</option>
+                        <option value="" data-i18n="form.choose-package">Choose a package</option>
+                        <option value="Professional - $149" data-i18n="pricing.professional">Professional - $149</option>
+                        <option value="Executive - $249" data-i18n="pricing.executive">Executive - $249 (Most Popular)</option>
+                        <option value="Premium - $349" data-i18n="pricing.premium">Premium - $349</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="industry">Target Industry</label>
-                    <input type="text" id="industry" name="industry"
-                        placeholder="e.g., Technology, Healthcare, Finance">
+                    <label for="industry" data-i18n="form.target-industry">Target Industry</label>
+                    <input type="text" id="industry" name="industry" data-i18n-attr="placeholder:form.industry-placeholder">
                 </div>
 
                 <div class="form-group">
-                    <label for="position">Target Position</label>
-                    <input type="text" id="position" name="position"
-                        placeholder="e.g., Software Engineer, Marketing Manager">
+                    <label for="position" data-i18n="form.target-position">Target Position</label>
+                    <input type="text" id="position" name="position" data-i18n-attr="placeholder:form.position-placeholder">
                 </div>
 
                 <div class="form-group">
-                    <label for="current-resume">Upload Current Resume (PDF/DOC)</label>
+                    <label for="current-resume" data-i18n="form.upload-resume">Upload Current Resume (PDF/DOC)</label>
                     <div class="file-upload" onclick="document.getElementById('resume-file').click()">
                         <i class="fas fa-cloud-upload-alt"
                             style="font-size: 2rem; color: #6b7280; margin-bottom: 1rem;"></i>
-                        <p>Click to upload your current resume</p>
-                        <p style="font-size: 0.9rem; color: #6b7280;">PDF, DOC, or DOCX (Max 10MB)</p>
+                        <p data-i18n="form.click-upload">Click to upload your current resume</p>
+                        <p style="font-size: 0.9rem; color: #6b7280;" data-i18n="form.file-format">PDF, DOC, or DOCX (Max 10MB)</p>
                     </div>
                     <input type="file" id="resume-file" name="resume-file" accept=".pdf,.doc,.docx"
                         style="display: none;">
                 </div>
 
                 <div class="form-group">
-                    <label for="additional-info">Additional Information</label>
-                    <textarea id="additional-info" name="additional-info" rows="4"
-                        placeholder="Tell us about your career goals, specific requirements, or any challenges you're facing..."></textarea>
+                    <label for="additional-info" data-i18n="form.additional-info">Additional Information</label>
+                    <textarea id="additional-info" name="additional-info" rows="4" data-i18n-attr="placeholder:form.tell-us-more"></textarea>
                 </div>
 
-                <button type="submit" class="submit-button">
+                <button type="submit" class="submit-button" data-i18n="form.submit">
                     <i class="fas fa-rocket"></i> Start My Resume Optimization
                 </button>
 
@@ -966,7 +980,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 OptimizeMyResume.pro. All rights reserved. | Privacy Policy | Terms of Service</p>
+                <p data-i18n="footer.copyright">&copy; 2025 OptimizeMyResume.pro. All rights reserved.</p>
+                <p data-i18n="footer.tagline">Professional resume optimization that gets results.</p>
             </div>
         </div>
     </footer>
@@ -1229,6 +1244,9 @@ Thank you for choosing OptimizeMyResume.pro!`);
             });
         });
     </script>
+    
+    <!-- Multi-language Support -->
+    <script src="/js/i18n.js"></script>
 </body>
 
 </html>

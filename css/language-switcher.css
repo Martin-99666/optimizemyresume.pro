@@ -1,0 +1,245 @@
+/* Language Switcher Styles */
+.language-switcher {
+    position: relative;
+    display: inline-block;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.language-current {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #ffffff;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #374151;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    min-width: 120px;
+}
+
+.language-current:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+.language-current .flag {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.language-current .name {
+    flex: 1;
+    text-align: left;
+}
+
+.language-current i {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    transition: transform 0.3s ease;
+}
+
+.language-dropdown.show .language-current i {
+    transform: rotate(180deg);
+}
+
+.language-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.language-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.language-option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: none;
+    border: none;
+    color: #374151;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.language-option:hover {
+    background: #f3f4f6;
+    color: #3b82f6;
+}
+
+.language-option.active {
+    background: #eff6ff;
+    color: #3b82f6;
+    font-weight: 600;
+}
+
+.language-option .flag {
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+.language-option .name {
+    flex: 1;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .language-switcher {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1001;
+    }
+    
+    .language-current {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+        min-width: 100px;
+    }
+    
+    .language-current .name {
+        display: none;
+    }
+    
+    .language-dropdown {
+        right: 0;
+        left: auto;
+        min-width: 160px;
+    }
+    
+    .language-option {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .language-current,
+    .language-dropdown {
+        background: #1f2937;
+        border-color: #374151;
+        color: #f9fafb;
+    }
+    
+    .language-current:hover {
+        border-color: #60a5fa;
+    }
+    
+    .language-option:hover {
+        background: #374151;
+        color: #60a5fa;
+    }
+    
+    .language-option.active {
+        background: #1e3a8a;
+        color: #93c5fd;
+    }
+}
+
+/* Animation for language change */
+.language-transition {
+    transition: opacity 0.3s ease;
+}
+
+.language-transition.changing {
+    opacity: 0.7;
+}
+
+/* RTL support for future languages */
+[dir="rtl"] .language-switcher {
+    direction: rtl;
+}
+
+[dir="rtl"] .language-dropdown {
+    left: auto;
+    right: 0;
+}
+
+/* Accessibility improvements */
+.language-current:focus,
+.language-option:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Loading state */
+.language-loading .language-current {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.language-loading .language-current::after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border: 2px solid #e5e7eb;
+    border-top: 2px solid #3b82f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-left: 0.5rem;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Integration with existing navigation */
+nav .language-switcher {
+    margin-left: 1rem;
+}
+
+/* Smooth language transition effect */
+[data-i18n] {
+    transition: all 0.2s ease-out;
+}
+
+.language-changing [data-i18n] {
+    opacity: 0.8;
+    transform: translateY(2px);
+}
+
+/* Flag emoji consistency */
+.flag {
+    font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+    font-variant-emoji: emoji;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .language-current,
+    .language-dropdown {
+        border-width: 3px;
+    }
+    
+    .language-option.active {
+        background: #000000;
+        color: #ffffff;
+    }
+}
