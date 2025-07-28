@@ -4,8 +4,23 @@ require('dotenv').config();
 
 async function createInitialAdmin() {
     try {
+        // Build MongoDB URI using same logic as server.js
+        const buildMongoURI = () => {
+            const username = process.env.MONGODB_USERNAME;
+            const password = process.env.MONGODB_PASSWORD;
+            const cluster = process.env.MONGODB_CLUSTER;
+            const database = process.env.MONGODB_DATABASE || 'optimizemyresume';
+            
+            if (username && password && cluster) {
+                return `mongodb+srv://${encodeURIComponent(username)}:${encodeURIComponent(password)}@${cluster}/${database}?retryWrites=true&w=majority&appName=OptimizeMyResume`;
+            } else {
+                return process.env.MONGODB_URI || 'mongodb://localhost:27017/optimizemyresume';
+            }
+        };
+
         // Connect to MongoDB
-        await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/optimizemyresume');
+        const uri = buildMongoURI();
+        await mongoose.connect(uri);
         console.log('Connected to MongoDB');
 
         // Check if admin already exists

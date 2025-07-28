@@ -4,9 +4,25 @@ require('dotenv').config();
 async function testConnection() {
     try {
         console.log('Testing MongoDB connection...');
-        console.log('URI:', process.env.MONGODB_URI.replace(/:[^:@]*@/, ':***@'));
         
-        await mongoose.connect(process.env.MONGODB_URI, {
+        // Build MongoDB URI using same logic as server.js
+        const buildMongoURI = () => {
+            const username = process.env.MONGODB_USERNAME;
+            const password = process.env.MONGODB_PASSWORD;
+            const cluster = process.env.MONGODB_CLUSTER;
+            const database = process.env.MONGODB_DATABASE || 'optimizemyresume';
+            
+            if (username && password && cluster) {
+                return `mongodb+srv://${encodeURIComponent(username)}:${encodeURIComponent(password)}@${cluster}/${database}?retryWrites=true&w=majority&appName=OptimizeMyResume`;
+            } else {
+                return process.env.MONGODB_URI || 'mongodb://localhost:27017/optimizemyresume';
+            }
+        };
+        
+        const uri = buildMongoURI();
+        console.log('URI:', uri.replace(/:[^:@]*@/, ':***@'));
+        
+        await mongoose.connect(uri, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             serverSelectionTimeoutMS: 30000,

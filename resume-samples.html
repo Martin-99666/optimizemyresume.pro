@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Samples & Examples | Professional Resume Templates | OptimizeMyResume.pro</title>
+    <meta name="description" content="View professional resume samples and examples across industries. See before/after transformations and get inspired by our expert resume writing work.">
+    <meta name="keywords" content="resume samples, resume examples, professional resume templates, resume before after, resume portfolio">
+    <link rel="canonical" href="https://optimizemyresume.pro/resume-samples">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Professional Resume Samples & Examples">
+    <meta property="og:description" content="Explore our portfolio of professional resume samples across industries. See real transformations and results.">
+    <meta property="og:url" content="https://optimizemyresume.pro/resume-samples">
+    <meta property="og:type" content="website">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Professional Resume Samples",
+        "description": "Collection of professional resume examples and templates across various industries",
+        "provider": {
+            "@type": "Organization",
+            "name": "OptimizeMyResume.pro"
+        },
+        "hasPart": [
+            {
+                "@type": "CreativeWork",
+                "name": "Technology Resume Samples",
+                "description": "Professional resume examples for software engineers and tech professionals"
+            },
+            {
+                "@type": "CreativeWork", 
+                "name": "Healthcare Resume Samples",
+                "description": "Medical professional resume examples for doctors, nurses, and healthcare workers"
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4b5563;
+            font-weight: 500;
+        }
+
+        .cta-button {
+            background: #f59e0b;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 3rem;
+            font-weight: 800;
+            color: #fbbf24;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Filter Tabs */
+        .filter-section {
+            padding: 3rem 0;
+            background: #f8fafc;
+        }
+
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-tab {
+            background: white;
+            border: 2px solid #e5e7eb;
+            color: #6b7280;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .filter-tab.active {
+            background: #3b82f6;
+            border-color: #3b82f6;
+            color: white;
+        }
+
+        .filter-tab:hover {
+            border-color: #3b82f6;
+            color: #3b82f6;
+        }
+
+        .filter-tab.active:hover {
+            color: white;
+        }
+
+        /* Sample Grid */
+        .samples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .sample-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .sample-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .sample-preview {
+            height: 300px;
+            background: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sample-image {
+            width: 200px;
+            height: 260px;
+            background: white;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            font-size: 0.7rem;
+            line-height: 1.2;
+        }
+
+        .sample-header {
+            border-bottom: 2px solid #3b82f6;
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .sample-name {
+            font-weight: 700;
+            color: #1f2937;
+            font-size: 0.9rem;
+        }
+
+        .sample-title {
+            color: #6b7280;
+            font-size: 0.7rem;
+        }
+
+        .sample-section {
+            margin-bottom: 0.8rem;
+        }
+
+        .sample-section-title {
+            font-weight: 600;
+            color: #374151;
+            font-size: 0.7rem;
+            margin-bottom: 0.3rem;
+            text-transform: uppercase;
+        }
+
+        .sample-content {
+            color: #6b7280;
+        }
+
+        .sample-info {
+            padding: 2rem;
+        }
+
+        .sample-badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .sample-job-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+        }
+
+        .sample-industry {
+            color: #6b7280;
+            margin-bottom: 1rem;
+        }
+
+        .sample-highlights {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .sample-highlights li {
+            padding: 0.25rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+            font-size: 0.9rem;
+            color: #4b5563;
+        }
+
+        .sample-highlights li::before {
+            content: "✓";
+            color: #10b981;
+            font-weight: 700;
+            position: absolute;
+            left: 0;
+        }
+
+        .view-button {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .view-button:hover {
+            background: #2563eb;
+        }
+
+        /* Before/After Section */
+        .before-after {
+            padding: 6rem 0;
+            background: #f8fafc;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+            align-items: center;
+        }
+
+        .comparison-card {
+            text-align: center;
+        }
+
+        .comparison-label {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .before-label {
+            color: #dc2626;
+        }
+
+        .after-label {
+            color: #16a34a;
+        }
+
+        .comparison-image {
+            width: 100%;
+            max-width: 300px;
+            height: 400px;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem;
+        }
+
+        .before-image {
+            background: #fef2f2;
+            border: 2px solid #fecaca;
+        }
+
+        .after-image {
+            background: #f0fdf4;
+            border: 2px solid #bbf7d0;
+        }
+
+        .comparison-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .stat-icon {
+            width: 60px;
+            height: 60px;
+            background: #3b82f6;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-description {
+            color: #6b7280;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .cta-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button-large {
+            background: #f59e0b;
+            color: white;
+            padding: 1.25rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);
+        }
+
+        .cta-button-large:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(245, 158, 11, 0.4);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #6b7280;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .comparison-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .filter-tabs {
+                gap: 0.5rem;
+            }
+            
+            .filter-tab {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <a href="/" class="logo">OptimizeMyResume.pro</a>
+            <ul class="nav-links">
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/#pricing">Pricing</a></li>
+                <li><a href="/resume-samples">Samples</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+            <a href="/#contact" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Resume Samples & Examples</h1>
+                <p class="hero-subtitle">Explore our portfolio of professional resume transformations across industries. See real examples of how we help professionals land their dream jobs.</p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Resume Samples</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label">Industries Covered</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">97%</span>
+                        <span class="stat-label">Success Rate</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter and Samples -->
+        <section class="filter-section">
+            <div class="container">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All Samples</button>
+                    <button class="filter-tab" data-filter="technology">Technology</button>
+                    <button class="filter-tab" data-filter="healthcare">Healthcare</button>
+                    <button class="filter-tab" data-filter="finance">Finance</button>
+                    <button class="filter-tab" data-filter="marketing">Marketing</button>
+                    <button class="filter-tab" data-filter="executive">Executive</button>
+                </div>
+                
+                <div class="samples-grid">
+                    <!-- Technology Samples -->
+                    <div class="sample-card" data-category="technology">
+                        <div class="sample-preview">
+                            <div class="sample-image">
+                                <div class="sample-header">
+                                    <div class="sample-name">ALEX RODRIGUEZ</div>
+                                    <div class="sample-title">Senior Software Engineer</div>
+                                </div>
+                                <div class="sample-section">
+                                    <div class="sample-section-title">Experience</div>
+                                    <div class="sample-content">• Led development of React applications<br>• Optimized database performance by 40%<br>• Mentored junior developers</div>
+                                </div>
+                                <div class="sample-section">
+                                    <div class="sample-section-title">Skills</div>
+                                    <div class="sample-content">JavaScript, Python, React, AWS, Docker</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sample-info">
+                            <span class="sample-badge">TECHNOLOGY</span>
+                            <h3 class="sample-job-title">Senior Software Engineer</h3>
+                            <p class="sample-industry">Technology • 8 Years Experience</p>
+                            <ul class="sample-highlights">
+                                <li>ATS-optimized with tech keywords</li>
+                                <li>Quantified development achievements</li>
+                                <li>Highlighted leadership experience</li>
+                                <li>Clean, modern formatting</li>
+                            </ul>
+                            <button class="view-button">View Full Sample</button>
+                        </div>
+                    </div>
+
+                    <!-- Healthcare Sample -->
+                    <div class="sample-card" data-category="healthcare">
+                        <div class="sample-preview">
+                            <div class="sample-image">
+                                <div class="sample-header">
+                                    <div class="sample-name">MARIA SANTOS, RN</div>
+                                    <div class="sample-title">ICU Nurse Manager</div>
+                                </div>
+                                <div class="sample-section">
+                                    <div class="sample-section-title">Experience</div>
+                                    <div class="sample-content">• Managed 15-bed ICU unit<br>• Reduced patient mortality by 12%<br>• Led COVID-19 response team</div>
+                                </div>
+                                <div class="sample-section">
+                                    <div class="sample-section-title">Certifications</div>
+                                    <div class="sample-content">RN License, CCRN, BLS Instructor</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sample-info">
+                            <span class="sample-badge">HEALTHCARE</span>
+                            <h3 class="sample-job-title">ICU Nurse Manager</h3>
+                            <p class="sample-industry">Healthcare • 12 Years Experience</p>
+                            <ul class="sample-highlights">
+                                <li>Medical terminology optimization</li>
+                                <li>Patient care outcome metrics</li>
+                                <li>HIPAA-compliant formatting</li>
+                                <li>Certification prominence</li>
+                            </ul>
+                            <button class="view-button">View Full Sample</button>
+                        </div>
+                    </div>
+
+                    <!-- Finance Sample -->
+                    <div class="sample-card" data-category="finance">
+                        <div class="sample-preview">
+                            <div class="sample-image">
+                                <div class="sample-header">
+                                    <div class="sample-name">ROBERT KIM, CFA</div>
+                                    <div class="sample-title">Investment Banking VP</div>
+                                </div>
+                                <div class="sample-section">
+                                    <div class="sample-section-title">Experience</div>
+                                    <div class="sample-content">• Executed $2.5B in M&A transactions<br>• Managed portfolio worth $500M<br>• Generated 15% annual returns</div>
+                                </div>
+                                <div class="sample-section">
+                                    <div class="sample-section-title">Education</div>
+                                    <div class="sample-content">MBA Finance, CFA Charter</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sample-info">
+                            <span class="sample-badge">FINANCE</span>
+                            <h3 class="sample-job-title">Investment Banking VP</h3>
+                            <p class="sample-industry">Finance • 10 Years Experience</p>
+                            <ul class="sample-highlights">
+                                <li>Quantified financial impact</li>
+                                <li>M&A transaction highlights</li>
+                                <li>Professional certifications</li>
+                                <li>Industry-specific keywords</li>
+                            </ul>
+                            <button class="view-button">View Full Sample</button>
+                        </div>
+                    </div>
+
+                    <!-- Marketing Sample -->
+                    <div class="sample-card" data-category="marketing">
+                        <div class="sample-preview">
+                            <div class="sample-image">
+                                <div class="sample-header">
+                                    <div class="sample-name">SARAH JOHNSON</div>
+                                    <div class="sample-title">Digital Marketing Director</div>
+                                </div>
+                                <div class="sample-section">
+                                    <div class="sample-section-title">Experience</div>
+                                    <div class="sample-content">• Increased conversions by 150%<br>• Managed $5M marketing budget<br>• Led team of 12 marketers</div>
+                                </div>
+                                <div class="sample-section">
+                                    <div class="sample-section-title">Skills</div>
+                                    <div class="sample-content">SEO, PPC, Analytics, Content Strategy</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sample-info">
+                            <span class="sample-badge">MARKETING</span>
+                            <h3 class="sample-job-title">Digital Marketing Director</h3>
+                            <p class="sample-industry">Marketing • 9 Years Experience</p>
+                            <ul class="sample-highlights">
+                                <li>ROI-focused achievements</li>
+                                <li>Multi-channel expertise</li>
+                                <li>Team leadership emphasis</li>
+                                <li>Digital marketing optimization</li>
+                            </ul>
+                            <button class="view-button">View Full Sample</button>
+                        </div>
+                    </div>
+
+                    <!-- Executive Sample -->
+                    <div class="sample-card" data-category="executive">
+                        <div class="sample-preview">
+                            <div class="sample-image">
+                                <div class="sample-header">
+                                    <div class="sample-name">PATRICIA WILLIAMS</div>
+                                    <div class="sample-title">Chief Executive Officer</div>
+                                </div>
+                                <div class="sample-section">
+                                    <div class="sample-section-title">Experience</div>
+                                    <div class="sample-content">• Grew revenue from $50M to $200M<br>• Led successful IPO process<br>• Expanded to 15 global markets</div>
+                                </div>
+                                <div class="sample-section">
+                                    <div class="sample-section-title">Education</div>
+                                    <div class="sample-content">MBA Harvard, Board Member</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sample-info">
+                            <span class="sample-badge">EXECUTIVE</span>
+                            <h3 class="sample-job-title">Chief Executive Officer</h3>
+                            <p class="sample-industry">Executive • 20 Years Experience</p>
+                            <ul class="sample-highlights">
+                                <li>Strategic leadership focus</li>
+                                <li>P&L responsibility highlights</li>
+                                <li>Board-ready presentation</li>
+                                <li>Executive branding</li>
+                            </ul>
+                            <button class="view-button">View Full Sample</button>
+                        </div>
+                    </div>
+
+                    <!-- Additional Sample -->
+                    <div class="sample-card" data-category="technology">
+                        <div class="sample-preview">
+                            <div class="sample-image">
+                                <div class="sample-header">
+                                    <div class="sample-name">DAVID CHEN</div>
+                                    <div class="sample-title">DevOps Engineer</div>
+                                </div>
+                                <div class="sample-section">
+                                    <div class="sample-section-title">Experience</div>
+                                    <div class="sample-content">• Reduced deployment time by 70%<br>• Implemented CI/CD pipelines<br>• Managed AWS infrastructure</div>
+                                </div>
+                                <div class="sample-section">
+                                    <div class="sample-section-title">Skills</div>
+                                    <div class="sample-content">Docker, Kubernetes, AWS, Jenkins</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sample-info">
+                            <span class="sample-badge">TECHNOLOGY</span>
+                            <h3 class="sample-job-title">DevOps Engineer</h3>
+                            <p class="sample-industry">Technology • 6 Years Experience</p>
+                            <ul class="sample-highlights">
+                                <li>Cloud infrastructure expertise</li>
+                                <li>Automation achievements</li>
+                                <li>Performance optimization</li>
+                                <li>Technical skill showcase</li>
+                            </ul>
+                            <button class="view-button">View Full Sample</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Before/After Section -->
+        <section class="before-after">
+            <div class="container">
+                <h2 class="section-title">Before & After Transformation</h2>
+                <p class="section-subtitle">See the dramatic improvement our professional optimization makes</p>
+                
+                <div class="comparison-grid">
+                    <div class="comparison-card">
+                        <h3 class="comparison-label before-label">❌ Before</h3>
+                        <div class="comparison-image before-image">
+                            <div style="font-weight: 600; margin-bottom: 1rem;">John Smith Resume</div>
+                            <div style="margin-bottom: 0.5rem;">• Worked at ABC Company</div>
+                            <div style="margin-bottom: 0.5rem;">• Did marketing stuff</div>
+                            <div style="margin-bottom: 0.5rem;">• Helped with campaigns</div>
+                            <div style="margin-bottom: 0.5rem;">• Used various tools</div>
+                            <div style="margin-bottom: 1rem;">• Good with people</div>
+                            <div style="color: #dc2626; font-size: 0.8rem;">
+                                ❌ Generic descriptions<br>
+                                ❌ No quantified results<br>
+                                ❌ Missing keywords<br>
+                                ❌ Poor formatting
+                            </div>
+                        </div>
+                        <p style="margin-top: 1rem; color: #dc2626; font-weight: 600;">0 Interview Calls</p>
+                    </div>
+                    
+                    <div class="comparison-card">
+                        <h3 class="comparison-label after-label">✅ After</h3>
+                        <div class="comparison-image after-image">
+                            <div style="font-weight: 600; margin-bottom: 1rem;">JOHN SMITH</div>
+                            <div style="font-weight: 500; margin-bottom: 1rem;">Digital Marketing Manager</div>
+                            <div style="margin-bottom: 0.5rem;">• Increased lead generation by 200%</div>
+                            <div style="margin-bottom: 0.5rem;">• Managed $500K PPC budget with 25% ROI</div>
+                            <div style="margin-bottom: 0.5rem;">• Led cross-functional team of 8 members</div>
+                            <div style="margin-bottom: 1rem;">• Optimized SEO ranking to top 3 positions</div>
+                            <div style="color: #16a34a; font-size: 0.8rem;">
+                                ✅ Quantified achievements<br>
+                                ✅ Industry keywords<br>
+                                ✅ ATS-optimized<br>
+                                ✅ Professional format
+                            </div>
+                        </div>
+                        <p style="margin-top: 1rem; color: #16a34a; font-weight: 600;">12 Interview Calls</p>
+                    </div>
+                </div>
+                
+                <div class="comparison-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">📈</div>
+                        <div class="stat-value">300%</div>
+                        <div class="stat-description">Increase in Interview Calls</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">⚡</div>
+                        <div class="stat-value">95%</div>
+                        <div class="stat-description">ATS Pass Rate</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">💰</div>
+                        <div class="stat-value">$25K</div>
+                        <div class="stat-description">Average Salary Increase</div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-value">3</div>
+                        <div class="stat-description">Days Average Delivery</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready for Your Transformation?</h2>
+                    <p class="cta-subtitle">Join thousands of professionals who've landed their dream jobs with our expert resume writing services.</p>
+                    <a href="/#contact" class="cta-button-large">Start My Resume Optimization</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 OptimizeMyResume.pro. All rights reserved.</p>
+            <p>Professional resume samples with guaranteed results.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterTabs = document.querySelectorAll('.filter-tab');
+            const sampleCards = document.querySelectorAll('.sample-card');
+
+            filterTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Update active tab
+                    filterTabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter cards
+                    sampleCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 100);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+
+            // View button functionality
+            document.querySelectorAll('.view-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    // In a real implementation, this would open a modal or redirect to detailed view
+                    alert('Sample viewing functionality would be implemented here. Contact us to see full resume samples!');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

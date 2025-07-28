@@ -4,9 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OptimizeMyResume.pro - Professional Resume Optimization Service</title>
-    <meta name="description"
-        content="Professional resume optimization that gets results. ATS-friendly resumes written by experts. 60-day interview guarantee.">
+    
+    <!-- Enhanced SEO Meta Tags -->
+    <title>OptimizeMyResume.pro - Professional Resume Optimization Service | ATS-Friendly Resumes</title>
+    <meta name="description" content="Professional resume optimization that gets results. ATS-friendly resumes written by certified experts. 60-day interview guarantee. Starting at $149.">
+    <meta name="keywords" content="resume optimization, ATS resume, professional resume writing, resume writer, job interview, career services, resume review">
+    <meta name="author" content="OptimizeMyResume.pro">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="OptimizeMyResume.pro - Professional Resume Optimization Service">
+    <meta property="og:description" content="Get more interviews with ATS-friendly resumes written by certified professionals. 60-day interview guarantee.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://optimizemyresume.pro">
+    <meta property="og:image" content="https://optimizemyresume.pro/og-image.jpg">
+    <meta property="og:site_name" content="OptimizeMyResume.pro">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OptimizeMyResume.pro - Professional Resume Optimization">
+    <meta name="twitter:description" content="Professional resume optimization that gets results. ATS-friendly resumes by experts.">
+    <meta name="twitter:image" content="https://optimizemyresume.pro/twitter-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://optimizemyresume.pro">
+    
+    <!-- Additional Links -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="alternate" type="application/rss+xml" title="OptimizeMyResume.pro Blog" href="/rss.xml">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J249PLKZHS"></script>
@@ -14,21 +39,77 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-J249PLKZHS');
     </script>
 
     <!-- Favicon -->
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
 
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Structured Data - Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "OptimizeMyResume.pro",
+        "url": "https://optimizemyresume.pro",
+        "logo": "https://optimizemyresume.pro/logo.png",
+        "description": "Professional resume optimization service with ATS-friendly resumes written by certified experts",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-800-RESUME",
+            "contactType": "Customer Service",
+            "availableLanguage": "English"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/company/optimizemyresume-pro",
+            "https://twitter.com/optimizeresume",
+            "https://www.facebook.com/optimizemyresume"
+        ]
+    }
+    </script>
+
+    <!-- Structured Data - Service Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Resume Optimization Service",
+        "description": "Professional resume optimization with ATS-friendly formatting and expert writing",
+        "provider": {
+            "@type": "Organization",
+            "name": "OptimizeMyResume.pro"
+        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Professional Package",
+                "price": "149",
+                "priceCurrency": "USD",
+                "description": "Complete resume optimization with ATS formatting"
+            },
+            {
+                "@type": "Offer",
+                "name": "Executive Package", 
+                "price": "249",
+                "priceCurrency": "USD",
+                "description": "Executive-level resume with LinkedIn optimization"
+            },
+            {
+                "@type": "Offer",
+                "name": "Premium Package",
+                "price": "349", 
+                "priceCurrency": "USD",
+                "description": "Complete career package with cover letter and LinkedIn"
+            }
+        ]
+    }
+    </script>
 
     <style>
         * {
@@ -60,6 +141,96 @@
             z-index: 1000;
         }
 
+        /* Breadcrumb Navigation */
+        .breadcrumb {
+            background: #f8fafc;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e2e8f0;
+            margin-top: 80px;
+        }
+
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            font-size: 0.875rem;
+            color: #64748b;
+        }
+
+        .breadcrumb-nav a {
+            color: #2563eb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .breadcrumb-nav a:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+
+        .breadcrumb-separator {
+            margin: 0 0.5rem;
+            color: #94a3b8;
+        }
+
+        .breadcrumb-current {
+            color: #1f2937;
+            font-weight: 500;
+        }
+
+        /* Skip to content for accessibility */
+        .skip-link {
+            background: #2563eb;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            z-index: 1001;
+            border-radius: 4px;
+        }
+
+        .skip-link:focus {
+            top: 6px;
+        }
+
+        /* Quick Navigation */
+        .quick-nav {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 999;
+            display: none;
+        }
+
+        .quick-nav.show {
+            display: block;
+        }
+
+        .quick-nav-item {
+            display: block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #cbd5e1;
+            margin: 8px 0;
+            transition: all 0.3s;
+            border: 2px solid #cbd5e1;
+        }
+
+        .quick-nav-item.active {
+            background: #2563eb;
+            border-color: #2563eb;
+            transform: scale(1.2);
+        }
+
+        .quick-nav-item:hover {
+            background: #2563eb;
+            border-color: #2563eb;
+            cursor: pointer;
+        }
+
         nav {
             display: flex;
             justify-content: space-between;
@@ -89,6 +260,46 @@
         }
 
         .nav-links a:hover {
+            color: #2563eb;
+        }
+        
+        /* Inline Links */
+        .inline-link {
+            color: #2563eb;
+            text-decoration: underline;
+            text-decoration-color: rgba(37, 99, 235, 0.3);
+            text-underline-offset: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        .inline-link:hover {
+            color: #1d4ed8;
+            text-decoration-color: #1d4ed8;
+            text-decoration-thickness: 2px;
+        }
+        
+        /* Section anchor links */
+        .section-anchor {
+            position: relative;
+            scroll-margin-top: 100px;
+        }
+        
+        .section-anchor::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            height: 100px;
+            visibility: hidden;
+        }
+        
+        /* Feature title links */
+        .feature-link {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .feature-link:hover {
             color: #2563eb;
         }
 
@@ -472,26 +683,53 @@
 </head>
 
 <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <!-- Header -->
     <header>
         <nav class="container">
-            <a href="#" class="logo">OptimizeMyResume.pro</a>
+            <a href="/" class="logo" aria-label="OptimizeMyResume.pro Homepage">OptimizeMyResume.pro</a>
             <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#samples">Samples</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#services" aria-label="Our Services">Services</a></li>
+                <li><a href="#pricing" aria-label="Pricing Plans">Pricing</a></li>
+                <li><a href="#samples" aria-label="Resume Samples">Samples</a></li>
+                <li><a href="#testimonials" aria-label="Customer Reviews">Reviews</a></li>
+                <li><a href="#faq" aria-label="Frequently Asked Questions">FAQ</a></li>
+                <li><a href="#contact" aria-label="Contact Us">Contact</a></li>
             </ul>
-            <a href="#contact" class="cta-button">Get Started</a>
+            <a href="#contact" class="cta-button" aria-label="Start Your Resume Optimization">Get Started</a>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
         <div class="container">
-            <h1>Professional Resume Optimization</h1>
-            <p class="hero-subtitle">Get more interviews with ATS-friendly resumes written by certified professionals.
-                60-day interview guarantee or your money back.</p>
+            <div class="breadcrumb-nav">
+                <a href="/">Home</a>
+                <span class="breadcrumb-separator" aria-hidden="true">›</span>
+                <span class="breadcrumb-current" aria-current="page">Professional Resume Optimization</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Quick Navigation Dots -->
+    <nav class="quick-nav" aria-label="Quick Navigation">
+        <a href="#hero" class="quick-nav-item" aria-label="Hero Section" data-section="hero"></a>
+        <a href="#services" class="quick-nav-item" aria-label="Services Section" data-section="services"></a>
+        <a href="#pricing" class="quick-nav-item" aria-label="Pricing Section" data-section="pricing"></a>
+        <a href="#testimonials" class="quick-nav-item" aria-label="Testimonials Section" data-section="testimonials"></a>
+        <a href="#contact" class="quick-nav-item" aria-label="Contact Section" data-section="contact"></a>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container">
+                <h1>Professional Resume Optimization</h1>
+                <p class="hero-subtitle">Get more interviews with <a href="#services" class="inline-link">ATS-friendly resumes</a> written by <a href="#about-experts" class="inline-link">certified professionals</a>.
+                    <strong><a href="#pricing" class="inline-link">60-day interview guarantee</a></strong> or your money back.</p>
 
             <div class="hero-stats">
                 <div class="stat">
@@ -513,7 +751,7 @@
     </section>
 
     <!-- Features Section -->
-    <section class="features" id="services">
+    <section class="features section-anchor" id="services">
         <div class="container">
             <h2 class="section-title">Why Choose OptimizeMyResume.pro?</h2>
             <div class="features-grid">
@@ -521,8 +759,8 @@
                     <div class="feature-icon">
                         <i class="fas fa-robot"></i>
                     </div>
-                    <h3>ATS-Optimized</h3>
-                    <p>Your resume will pass through Applicant Tracking Systems and reach human recruiters every time.
+                    <h3><a href="#ats-optimization" class="feature-link">ATS-Optimized</a></h3>
+                    <p>Your resume will pass through <a href="/ats-guide" class="inline-link">Applicant Tracking Systems</a> and reach human recruiters every time. <a href="#pricing" class="inline-link">Learn more about our optimization process</a>.
                     </p>
                 </div>
 
@@ -913,6 +1151,96 @@ Please try again or contact support if the problem persists.`);
                     heroButton.style.transform = 'translateY(-3px)';
                 }, 1000);
             }, 3000);
+        });
+
+        // Quick Navigation Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const quickNav = document.querySelector('.quick-nav');
+            const quickNavItems = document.querySelectorAll('.quick-nav-item');
+            const sections = document.querySelectorAll('section[id]');
+            
+            // Show/hide quick nav on scroll
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    quickNav.classList.add('show');
+                } else {
+                    quickNav.classList.remove('show');
+                }
+                
+                // Update active nav item
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 120;
+                    const sectionHeight = section.offsetHeight;
+                    if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                quickNavItems.forEach(item => {
+                    item.classList.remove('active');
+                    if (item.getAttribute('data-section') === current) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+            
+            // Smooth scroll for quick nav
+            quickNavItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Enhanced smooth scrolling for all anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // Update URL without jumping
+                        if (history.pushState) {
+                            history.pushState(null, null, this.getAttribute('href'));
+                        }
+                    }
+                });
+            });
+            
+            // Intersection Observer for fade-in animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all fade-in elements
+            document.querySelectorAll('.fade-in').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
         });
     </script>
 </body>

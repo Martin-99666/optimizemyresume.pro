@@ -11,7 +11,9 @@
     "test-db": "node scripts/testConnection.js",
     "test-email": "node scripts/testEmail.js",
     "test-stripe": "node scripts/testStripe.js",
-    "diagnose": "node scripts/diagnose.js"
+    "diagnose": "node scripts/diagnose.js",
+    "generate-sitemap": "node scripts/generateSitemap.js ../",
+    "backup": "node scripts/createBackup.js"
   },
   "dependencies": {
     "express": "^4.18.2",

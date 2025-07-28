@@ -36,8 +36,23 @@ if (process.env.NODE_ENV !== 'production') {
     app.use(morgan('dev'));
 }
 
-// Database connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/optimizemyresume', {
+// Database connection with improved security
+const buildMongoURI = () => {
+    const username = process.env.MONGODB_USERNAME;
+    const password = process.env.MONGODB_PASSWORD;
+    const cluster = process.env.MONGODB_CLUSTER;
+    const database = process.env.MONGODB_DATABASE || 'optimizemyresume';
+    
+    if (username && password && cluster) {
+        // Use environment variables to build URI
+        return `mongodb+srv://${encodeURIComponent(username)}:${encodeURIComponent(password)}@${cluster}/${database}?retryWrites=true&w=majority&appName=OptimizeMyResume`;
+    } else {
+        // Fallback to environment MONGODB_URI or local
+        return process.env.MONGODB_URI || 'mongodb://localhost:27017/optimizemyresume';
+    }
+};
+
+mongoose.connect(buildMongoURI(), {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })

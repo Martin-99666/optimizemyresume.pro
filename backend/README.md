@@ -85,7 +85,11 @@ A complete backend system for the OptimizeMyResume.pro professional resume optim
 |----------|-------------|----------|
 | `PORT` | Server port | No (default: 3001) |
 | `NODE_ENV` | Environment | No (default: development) |
-| `MONGODB_URI` | MongoDB connection string | Yes |
+| `MONGODB_USERNAME` | MongoDB username | Yes* |
+| `MONGODB_PASSWORD` | MongoDB password | Yes* |
+| `MONGODB_CLUSTER` | MongoDB cluster URL | Yes* |
+| `MONGODB_DATABASE` | Database name | No (default: optimizemyresume) |
+| `MONGODB_URI` | Full MongoDB connection string | Yes** |
 | `JWT_SECRET` | JWT signing secret | Yes |
 | `EMAIL_SERVICE` | Email service provider | Yes |
 | `EMAIL_USER` | Email username | Yes |
@@ -96,6 +100,33 @@ A complete backend system for the OptimizeMyResume.pro professional resume optim
 | `ADMIN_EMAIL` | Initial admin email | Yes |
 | `ADMIN_PASSWORD` | Initial admin password | Yes |
 | `FRONTEND_URL` | Frontend URL for CORS | Yes |
+
+*Use either individual MongoDB credentials (MONGODB_USERNAME, MONGODB_PASSWORD, MONGODB_CLUSTER) or **full connection string (MONGODB_URI).
+
+### Security Best Practices
+
+1. **Never commit `.env` files** - They are excluded by `.gitignore`
+2. **Use strong passwords** - Generate secure random strings for secrets
+3. **Use environment-specific credentials** - Different for dev/staging/production
+4. **Regularly rotate credentials** - Especially for production environments
+5. **Use MongoDB App Passwords** - For Gmail integration, use app-specific passwords
+
+### Environment Setup
+
+The application supports two methods for MongoDB connection:
+
+**Method 1: Individual credentials (Recommended)**
+```bash
+MONGODB_USERNAME=your_username
+MONGODB_PASSWORD=your_password
+MONGODB_CLUSTER=cluster0.xyz123.mongodb.net
+MONGODB_DATABASE=optimizemyresume
+```
+
+**Method 2: Full connection string**
+```bash
+MONGODB_URI=mongodb+srv://username:password@cluster0.xyz123.mongodb.net/dbname?retryWrites=true&w=majority
+```
 
 ## Database Models
 
