@@ -1246,7 +1246,19 @@ Thank you for choosing OptimizeMyResume.pro!`);
     </script>
     
     <!-- Multi-language Support -->
-    <script src="/js/i18n.js"></script>
+    <script src="./js/i18n.js"></script>
+    <script>
+        // Initialize i18n when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Initializing i18n...');
+            if (typeof I18n !== 'undefined') {
+                window.i18n = new I18n();
+                console.log('i18n initialized successfully');
+            } else {
+                console.error('I18n class not found');
+            }
+        });
+    </script>
 </body>
 
 </html>

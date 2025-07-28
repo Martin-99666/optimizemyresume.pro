@@ -560,10 +560,19 @@ class I18n {
     }
 }
 
-// Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-    window.i18n = new I18n();
-});
+// Initialize when DOM is ready - but avoid double initialization
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+        if (!window.i18n) {
+            window.i18n = new I18n();
+        }
+    });
+} else {
+    // DOM already loaded
+    if (!window.i18n) {
+        window.i18n = new I18n();
+    }
+}
 
 // Export for use in other scripts
 if (typeof module !== 'undefined' && module.exports) {
