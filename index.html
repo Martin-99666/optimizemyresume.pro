@@ -810,24 +810,24 @@
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Interview Guarantee</h3>
-                    <p>60-day interview guarantee or we'll revise your resume for free until you get interviews.</p>
+                    <h3 data-i18n="feature.interview-guarantee.title">Interview Guarantee</h3>
+                    <p data-i18n="feature.interview-guarantee.description">60-day interview guarantee or we'll revise your resume for free until you get interviews.</p>
                 </div>
 
                 <div class="feature fade-in">
                     <div class="feature-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3>Industry Specific</h3>
-                    <p>Tailored to your industry with relevant keywords and formatting that recruiters expect.</p>
+                    <h3 data-i18n="feature.industry-specific.title">Industry Specific</h3>
+                    <p data-i18n="feature.industry-specific.description">Tailored to your industry with relevant keywords and formatting that recruiters expect.</p>
                 </div>
 
                 <div class="feature fade-in">
                     <div class="feature-icon">
                         <i class="fas fa-infinity"></i>
                     </div>
-                    <h3>Unlimited Revisions</h3>
-                    <p>We work with you until you're 100% satisfied with your professional resume.</p>
+                    <h3 data-i18n="feature.unlimited-revisions.title">Unlimited Revisions</h3>
+                    <p data-i18n="feature.unlimited-revisions.description">We work with you until you're 100% satisfied with your professional resume.</p>
                 </div>
             </div>
         </div>
@@ -858,12 +858,12 @@
                     <h3 class="plan-name" data-i18n="pricing.executive">Executive</h3>
                     <div class="plan-price">$249</div>
                     <ul class="plan-features">
-                        <li>Everything in Professional</li>
-                        <li>LinkedIn Profile Optimization</li>
-                        <li>Professional Cover Letter</li>
-                        <li>Unlimited Revisions</li>
-                        <li>24-Hour Rush Delivery</li>
-                        <li>Priority Customer Support</li>
+                        <li data-i18n="feature.everything-professional">Everything in Professional</li>
+                        <li data-i18n="feature.linkedin-optimization">LinkedIn Profile Optimization</li>
+                        <li data-i18n="feature.cover-letter">Professional Cover Letter</li>
+                        <li data-i18n="feature.unlimited-revisions-short">Unlimited Revisions</li>
+                        <li data-i18n="feature.rush-delivery">24-Hour Rush Delivery</li>
+                        <li data-i18n="feature.priority-support">Priority Customer Support</li>
                     </ul>
                     <button class="plan-button" onclick="selectPlan('Executive', 249)" data-i18n="pricing.select-package">Select This Package</button>
                 </div>
@@ -872,12 +872,12 @@
                     <h3 class="plan-name" data-i18n="pricing.premium">Premium</h3>
                     <div class="plan-price">$349</div>
                     <ul class="plan-features">
-                        <li>Everything in Executive</li>
-                        <li>1-on-1 Career Consultation</li>
-                        <li>Interview Preparation Guide</li>
-                        <li>Industry-Specific Keywords</li>
-                        <li>Thank You Letter Template</li>
-                        <li>90-Day Job Search Support</li>
+                        <li data-i18n="feature.everything-executive">Everything in Executive</li>
+                        <li data-i18n="feature.career-consultation">1-on-1 Career Consultation</li>
+                        <li data-i18n="feature.interview-prep">Interview Preparation Guide</li>
+                        <li data-i18n="feature.industry-keywords">Industry-Specific Keywords</li>
+                        <li data-i18n="feature.thank-you-letter">Thank You Letter Template</li>
+                        <li data-i18n="feature.job-search-support">90-Day Job Search Support</li>
                     </ul>
                     <button class="plan-button" onclick="selectPlan('Premium', 349)" data-i18n="pricing.select-package">Select This Package</button>
                 </div>
@@ -1476,6 +1476,100 @@ Thank you for choosing OptimizeMyResume.pro!`);
             'feature.interview-guarantee': {
                 en: '60-Day Interview Guarantee', de: '60 Tage Interview-Garantie', it: 'Garanzia Colloquio 60 Giorni', fr: 'Garantie Entretien 60 Jours',
                 es: 'Garantía de Entrevista 60 Días', ja: '60日間面接保証', ko: '60일 면접 보증', zh: '60天面试保证'
+            },
+
+            // 新增的功能翻译
+            'feature.interview-guarantee.title': {
+                en: 'Interview Guarantee', de: 'Interview-Garantie', it: 'Garanzia Colloquio', fr: 'Garantie Entretien',
+                es: 'Garantía de Entrevista', ja: '面接保証', ko: '면접 보증', zh: '面试保证'
+            },
+            'feature.interview-guarantee.description': {
+                en: '60-day interview guarantee or we\'ll revise your resume for free until you get interviews.',
+                de: '60 Tage Interview-Garantie oder wir überarbeiten Ihren Lebenslauf kostenlos, bis Sie Vorstellungsgespräche bekommen.',
+                it: 'Garanzia colloquio di 60 giorni o rivediamo gratuitamente il tuo CV finché non ottieni colloqui.',
+                fr: 'Garantie entretien de 60 jours ou nous révisons gratuitement votre CV jusqu\'à ce que vous obteniez des entretiens.',
+                es: 'Garantía de entrevista de 60 días o revisaremos tu CV gratis hasta que consigas entrevistas.',
+                ja: '60日間面接保証、または面接を獲得するまで無料で履歴書を修正します。',
+                ko: '60일 면접 보증 또는 면접을 받을 때까지 무료로 이력서를 수정해드립니다.',
+                zh: '60天面试保证，或者我们免费修改您的简历直到您获得面试机会。'
+            },
+            'feature.industry-specific.title': {
+                en: 'Industry Specific', de: 'Branchenspezifisch', it: 'Specifico del Settore', fr: 'Spécifique à l\'Industrie',
+                es: 'Específico de la Industria', ja: '業界特化', ko: '업계별 전문', zh: '行业专属'
+            },
+            'feature.industry-specific.description': {
+                en: 'Tailored to your industry with relevant keywords and formatting that recruiters expect.',
+                de: 'Auf Ihre Branche zugeschnitten mit relevanten Schlüsselwörtern und Formatierung, die Recruiter erwarten.',
+                it: 'Personalizzato per il tuo settore con parole chiave rilevanti e formattazione che i recruiter si aspettano.',
+                fr: 'Adapté à votre industrie avec des mots-clés pertinents et un formatage que les recruteurs attendent.',
+                es: 'Adaptado a tu industria con palabras clave relevantes y formato que esperan los reclutadores.',
+                ja: 'あなたの業界に合わせて、採用担当者が期待する関連キーワードと書式でカスタマイズされています。',
+                ko: '채용담당자가 기대하는 관련 키워드와 형식으로 귀하의 업계에 맞게 조정됩니다.',
+                zh: '针对您的行业量身定制，包含招聘人员期望的相关关键词和格式。'
+            },
+            'feature.unlimited-revisions.title': {
+                en: 'Unlimited Revisions', de: 'Unbegrenzte Überarbeitungen', it: 'Revisioni Illimitate', fr: 'Révisions Illimitées',
+                es: 'Revisiones Ilimitadas', ja: '無制限修正', ko: '무제한 수정', zh: '无限修改'
+            },
+            'feature.unlimited-revisions.description': {
+                en: 'We work with you until you\'re 100% satisfied with your professional resume.',
+                de: 'Wir arbeiten mit Ihnen, bis Sie zu 100% mit Ihrem professionellen Lebenslauf zufrieden sind.',
+                it: 'Lavoriamo con te finché non sei soddisfatto al 100% del tuo CV professionale.',
+                fr: 'Nous travaillons avec vous jusqu\'à ce que vous soyez satisfait à 100% de votre CV professionnel.',
+                es: 'Trabajamos contigo hasta que estés 100% satisfecho con tu CV profesional.',
+                ja: 'あなたのプロフェッショナル履歴書に100%満足していただけるまで一緒に作業します。',
+                ko: '귀하의 전문 이력서에 100% 만족할 때까지 함께 작업합니다.',
+                zh: '我们与您合作，直到您对专业简历100%满意为止。'
+            },
+            
+            // Executive和Premium套餐功能翻译
+            'feature.everything-professional': {
+                en: 'Everything in Professional', de: 'Alles in Professional', it: 'Tutto in Professionale', fr: 'Tout dans Professionnel',
+                es: 'Todo en Profesional', ja: 'プロフェッショナルの全て', ko: '프로페셔널의 모든 것', zh: '包含专业版所有内容'
+            },
+            'feature.linkedin-optimization': {
+                en: 'LinkedIn Profile Optimization', de: 'LinkedIn-Profil Optimierung', it: 'Ottimizzazione Profilo LinkedIn', fr: 'Optimisation de Profil LinkedIn',
+                es: 'Optimización de Perfil LinkedIn', ja: 'LinkedIn プロフィール最適化', ko: 'LinkedIn 프로필 최적화', zh: 'LinkedIn档案优化'
+            },
+            'feature.cover-letter': {
+                en: 'Professional Cover Letter', de: 'Professionelles Anschreiben', it: 'Lettera di Presentazione Professionale', fr: 'Lettre de Motivation Professionnelle',
+                es: 'Carta de Presentación Profesional', ja: 'プロフェッショナル カバーレター', ko: '전문 커버레터', zh: '专业求职信'
+            },
+            'feature.unlimited-revisions-short': {
+                en: 'Unlimited Revisions', de: 'Unbegrenzte Überarbeitungen', it: 'Revisioni Illimitate', fr: 'Révisions Illimitées',
+                es: 'Revisiones Ilimitadas', ja: '無制限修正', ko: '무제한 수정', zh: '无限修改'
+            },
+            'feature.rush-delivery': {
+                en: '24-Hour Rush Delivery', de: '24-Stunden Express-Lieferung', it: 'Consegna Express 24 Ore', fr: 'Livraison Express 24h',
+                es: 'Entrega Express 24 Horas', ja: '24時間特急配送', ko: '24시간 긴급 배송', zh: '24小时加急交付'
+            },
+            'feature.priority-support': {
+                en: 'Priority Customer Support', de: 'Prioritärer Kundensupport', it: 'Supporto Clienti Prioritario', fr: 'Support Client Prioritaire',
+                es: 'Soporte al Cliente Prioritario', ja: '優先カスタマーサポート', ko: '우선 고객 지원', zh: '优先客户支持'
+            },
+            'feature.everything-executive': {
+                en: 'Everything in Executive', de: 'Alles in Executive', it: 'Tutto in Esecutivo', fr: 'Tout dans Exécutif',
+                es: 'Todo en Ejecutivo', ja: 'エグゼクティブの全て', ko: '임원판의 모든 것', zh: '包含高管版所有内容'
+            },
+            'feature.career-consultation': {
+                en: '1-on-1 Career Consultation', de: '1-zu-1 Karriereberatung', it: 'Consulenza Carriera 1-a-1', fr: 'Consultation Carrière 1-à-1',
+                es: 'Consulta de Carrera 1-a-1', ja: '1対1キャリア相談', ko: '1:1 커리어 상담', zh: '一对一职业咨询'
+            },
+            'feature.interview-prep': {
+                en: 'Interview Preparation Guide', de: 'Interview-Vorbereitungsleitfaden', it: 'Guida Preparazione Colloqui', fr: 'Guide de Préparation d\'Entretien',
+                es: 'Guía de Preparación de Entrevistas', ja: '面接準備ガイド', ko: '면접 준비 가이드', zh: '面试准备指南'
+            },
+            'feature.industry-keywords': {
+                en: 'Industry-Specific Keywords', de: 'Branchenspezifische Schlüsselwörter', it: 'Parole Chiave Specifiche del Settore', fr: 'Mots-clés Spécifiques à l\'Industrie',
+                es: 'Palabras Clave Específicas de la Industria', ja: '業界固有のキーワード', ko: '업계별 전문 키워드', zh: '行业专属关键词'
+            },
+            'feature.thank-you-letter': {
+                en: 'Thank You Letter Template', de: 'Dankschreiben-Vorlage', it: 'Modello Lettera di Ringraziamento', fr: 'Modèle de Lettre de Remerciement',
+                es: 'Plantilla de Carta de Agradecimiento', ja: 'お礼状テンプレート', ko: '감사 편지 템플릿', zh: '感谢信模板'
+            },
+            'feature.job-search-support': {
+                en: '90-Day Job Search Support', de: '90-Tage Jobsuche-Unterstützung', it: 'Supporto Ricerca Lavoro 90 Giorni', fr: 'Support de Recherche d\'Emploi 90 Jours',
+                es: 'Soporte de Búsqueda de Empleo 90 Días', ja: '90日間就職活動サポート', ko: '90일 구직 지원', zh: '90天求职支持'
             },
 
             // 联系表单

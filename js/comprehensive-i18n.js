@@ -436,6 +436,90 @@ const TRANSLATIONS = {
         ja: '結果を出すプロフェッショナルな履歴書最適化。',
         ko: '결과를 내는 전문 이력서 최적화.',
         zh: '获得结果的专业简历优化。'
+    },
+
+    // ATS服务页面翻译
+    'ats-service.title': {
+        en: 'ATS Resume Optimization Service | Beat Applicant Tracking Systems | OptimizeMyResume.pro',
+        de: 'ATS Lebenslauf-Optimierungsservice | Bewerberverfolgungssysteme überwinden | OptimizeMyResume.pro',
+        it: 'Servizio di Ottimizzazione CV ATS | Battere i Sistemi di Tracciamento Candidati | OptimizeMyResume.pro',
+        fr: 'Service d\'Optimisation CV ATS | Battre les Systèmes de Suivi des Candidats | OptimizeMyResume.pro',
+        es: 'Servicio de Optimización CV ATS | Vencer Sistemas de Seguimiento de Candidatos | OptimizeMyResume.pro',
+        ja: 'ATS履歴書最適化サービス | 応募者追跡システムを攻略 | OptimizeMyResume.pro',
+        ko: 'ATS 이력서 최적화 서비스 | 지원자 추적 시스템 극복 | OptimizeMyResume.pro',
+        zh: 'ATS简历优化服务 | 击败申请人跟踪系统 | OptimizeMyResume.pro'
+    },
+    'ats-service.description': {
+        en: 'Professional ATS resume optimization that guarantees your resume passes Applicant Tracking Systems. Expert ATS formatting, keyword optimization, 95% pass rate. Starting at $179.',
+        de: 'Professionelle ATS-Lebenslauf-Optimierung, die garantiert, dass Ihr Lebenslauf Bewerberverfolgungssysteme passiert. Experten-ATS-Formatierung, Keyword-Optimierung, 95% Erfolgsquote. Ab $179.',
+        it: 'Ottimizzazione professionale CV ATS che garantisce il passaggio dei Sistemi di Tracciamento Candidati. Formattazione ATS esperta, ottimizzazione parole chiave, 95% tasso di successo. Da $179.',
+        fr: 'Optimisation professionnelle CV ATS qui garantit le passage des Systèmes de Suivi des Candidats. Formatage ATS expert, optimisation mots-clés, 95% taux de réussite. À partir de $179.',
+        es: 'Optimización profesional CV ATS que garantiza el paso por Sistemas de Seguimiento de Candidatos. Formato ATS experto, optimización palabras clave, 95% tasa de éxito. Desde $179.',
+        ja: 'ATS履歴書最適化の専門サービス。応募者追跡システム通過を保証。エキスパートATS書式、キーワード最適化、95%通過率。$179から。',
+        ko: '지원자 추적 시스템 통과를 보장하는 전문 ATS 이력서 최적화. 전문 ATS 형식, 키워드 최적화, 95% 통과율. $179부터.',
+        zh: '专业ATS简历优化，保证您的简历通过申请人跟踪系统。专家ATS格式、关键词优化，95%通过率。179美元起。'
+    },
+    'ats-service.hero.title': {
+        en: 'ATS Resume Optimization That Guarantees Results',
+        de: 'ATS-Lebenslauf-Optimierung mit Ergebnis-Garantie',
+        it: 'Ottimizzazione CV ATS che Garantisce Risultati',
+        fr: 'Optimisation CV ATS qui Garantit des Résultats',
+        es: 'Optimización CV ATS que Garantiza Resultados',
+        ja: '結果を保証するATS履歴書最適化',
+        ko: '결과를 보장하는 ATS 이력서 최적화',
+        zh: '保证结果的ATS简历优化'
+    },
+    'ats-service.hero.subtitle': {
+        en: 'Beat any Applicant Tracking System with our professional ATS optimization service. Expert formatting, strategic keywords, and proven techniques that get your resume past ATS filters every time.',
+        de: 'Überwinden Sie jedes Bewerberverfolgungssystem mit unserem professionellen ATS-Optimierungsservice. Experten-Formatierung, strategische Schlüsselwörter und bewährte Techniken, die Ihren Lebenslauf jedes Mal durch ATS-Filter bringen.',
+        it: 'Batti qualsiasi Sistema di Tracciamento Candidati con il nostro servizio professionale di ottimizzazione ATS. Formattazione esperta, parole chiave strategiche e tecniche comprovate che fanno passare il tuo CV attraverso i filtri ATS ogni volta.',
+        fr: 'Battez tout Système de Suivi des Candidats avec notre service professionnel d\'optimisation ATS. Formatage expert, mots-clés stratégiques et techniques éprouvées qui font passer votre CV à travers les filtres ATS à chaque fois.',
+        es: 'Vence cualquier Sistema de Seguimiento de Candidatos con nuestro servicio profesional de optimización ATS. Formato experto, palabras clave estratégicas y técnicas probadas que hacen pasar tu CV por filtros ATS siempre.',
+        ja: 'プロフェッショナルATS最適化サービスで、あらゆる応募者追跡システムを攻略。エキスパート書式、戦略的キーワード、実績のある技術で、毎回ATSフィルターを通過させます。',
+        ko: '전문 ATS 최적화 서비스로 모든 지원자 추적 시스템을 이기세요. 전문 형식, 전략적 키워드, 검증된 기술로 매번 ATS 필터를 통과시킵니다.',
+        zh: '用我们的专业ATS优化服务击败任何申请人跟踪系统。专家格式、战略关键词和经过验证的技术，让您的简历每次都能通过ATS过滤器。'
+    },
+    'ats-service.hero.cta': {
+        en: 'Get ATS-Optimized Resume Now',
+        de: 'ATS-optimierten Lebenslauf jetzt erhalten',
+        it: 'Ottieni CV Ottimizzato ATS Ora',
+        fr: 'Obtenez un CV Optimisé ATS Maintenant',
+        es: 'Obtén CV Optimizado ATS Ahora',
+        ja: 'ATS最適化履歴書を今すぐ取得',
+        ko: '지금 ATS 최적화 이력서 받기',
+        zh: '立即获取ATS优化简历'
+    },
+    'ats-service.stats.passrate-label': {
+        en: 'ATS Pass Rate', de: 'ATS-Erfolgsquote', it: 'Tasso Successo ATS', fr: 'Taux Réussite ATS',
+        es: 'Tasa Éxito ATS', ja: 'ATS通過率', ko: 'ATS 통과율', zh: 'ATS通过率'
+    },
+    'ats-service.stats.systems-label': {
+        en: 'ATS Systems Tested', de: 'ATS-Systeme Getestet', it: 'Sistemi ATS Testati', fr: 'Systèmes ATS Testés',
+        es: 'Sistemas ATS Probados', ja: 'テスト済みATSシステム', ko: '테스트된 ATS 시스템', zh: '测试的ATS系统'
+    },
+    'ats-service.stats.clients-label': {
+        en: 'ATS Success Stories', de: 'ATS-Erfolgsgeschichten', it: 'Storie di Successo ATS', fr: 'Histoires de Réussite ATS',
+        es: 'Historias de Éxito ATS', ja: 'ATS成功事例', ko: 'ATS 성공 사례', zh: 'ATS成功案例'
+    },
+    'ats-service.features.title': {
+        en: 'Why Our ATS Optimization Works',
+        de: 'Warum unsere ATS-Optimierung funktioniert',
+        it: 'Perché Funziona la Nostra Ottimizzazione ATS',
+        fr: 'Pourquoi Notre Optimisation ATS Fonctionne',
+        es: 'Por Qué Funciona Nuestra Optimización ATS',
+        ja: '私たちのATS最適化が機能する理由',
+        ko: '우리의 ATS 최적화가 작동하는 이유',
+        zh: '为什么我们的ATS优化有效'
+    },
+    'ats-service.features.subtitle': {
+        en: 'Our ATS experts know exactly how to format and optimize your resume for maximum compatibility with all major Applicant Tracking Systems',
+        de: 'Unsere ATS-Experten wissen genau, wie sie Ihren Lebenslauf für maximale Kompatibilität mit allen wichtigen Bewerberverfolgungssystemen formatieren und optimieren',
+        it: 'I nostri esperti ATS sanno esattamente come formattare e ottimizzare il tuo CV per la massima compatibilità con tutti i principali Sistemi di Tracciamento Candidati',
+        fr: 'Nos experts ATS savent exactement comment formater et optimiser votre CV pour une compatibilité maximale avec tous les principaux Systèmes de Suivi des Candidats',
+        es: 'Nuestros expertos ATS saben exactamente cómo formatear y optimizar tu CV para máxima compatibilidad con todos los principales Sistemas de Seguimiento de Candidatos',
+        ja: '私たちのATSエキスパートは、すべての主要な応募者追跡システムとの最大互換性のために履歴書をフォーマットし最適化する方法を正確に知っています',
+        ko: '우리의 ATS 전문가들은 모든 주요 지원자 추적 시스템과 최대한 호환되도록 이력서를 형식화하고 최적화하는 방법을 정확히 알고 있습니다',
+        zh: '我们的ATS专家确切知道如何格式化和优化您的简历，以获得与所有主要申请人跟踪系统的最大兼容性'
     }
 };
 
