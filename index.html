@@ -1245,18 +1245,130 @@ Thank you for choosing OptimizeMyResume.pro!`);
         });
     </script>
     
-    <!-- Multi-language Support -->
-    <script src="./js/i18n.js"></script>
+    <!-- Multi-language Support - Embedded -->
     <script>
-        // Initialize i18n when page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('Initializing i18n...');
-            if (typeof I18n !== 'undefined') {
-                window.i18n = new I18n();
-                console.log('i18n initialized successfully');
-            } else {
-                console.error('I18n class not found');
+        // Embedded i18n system for immediate functionality
+        const LANGUAGES = {
+            en: { name: 'English', flag: '🇺🇸' },
+            de: { name: 'Deutsch', flag: '🇩🇪' },
+            it: { name: 'Italiano', flag: '🇮🇹' },
+            fr: { name: 'Français', flag: '🇫🇷' },
+            es: { name: 'Español', flag: '🇪🇸' },
+            ja: { name: '日本語', flag: '🇯🇵' },
+            ko: { name: '한국어', flag: '🇰🇷' },
+            zh: { name: '中文', flag: '🇨🇳' }
+        };
+
+        const TRANSLATIONS = {
+            'hero.title': {
+                en: 'Professional Resume Optimization That Gets Results',
+                de: 'Professionelle Lebenslauf-Optimierung, die Ergebnisse erzielt',
+                it: 'Ottimizzazione Professionale del CV che Porta Risultati',
+                fr: 'Optimisation Professionnelle de CV qui Obtient des Résultats',
+                es: 'Optimización Profesional de CV que Obtiene Resultados',
+                ja: '結果を出すプロフェッショナルな履歴書最適化',
+                ko: '결과를 내는 전문 이력서 최적화',
+                zh: '获得结果的专业简历优化'
+            },
+            'nav.services': {
+                en: 'Services', de: 'Dienstleistungen', it: 'Servizi', fr: 'Services',
+                es: 'Servicios', ja: 'サービス', ko: '서비스', zh: '服务'
+            },
+            'nav.pricing': {
+                en: 'Pricing', de: 'Preise', it: 'Prezzi', fr: 'Tarifs',
+                es: 'Precios', ja: '料金', ko: '가격', zh: '价格'
+            },
+            'nav.contact': {
+                en: 'Contact', de: 'Kontakt', it: 'Contatto', fr: 'Contact',
+                es: 'Contacto', ja: 'お問い合わせ', ko: '연락처', zh: '联系'
+            },
+            'nav.get-started': {
+                en: 'Get Started', de: 'Loslegen', it: 'Inizia', fr: 'Commencer',
+                es: 'Empezar', ja: '始める', ko: '시작하기', zh: '开始'
             }
+        };
+
+        class SimpleI18n {
+            constructor() {
+                this.currentLang = localStorage.getItem('preferredLanguage') || 'en';
+                this.init();
+            }
+
+            init() {
+                this.createLanguageSwitcher();
+                this.updateContent();
+            }
+
+            createLanguageSwitcher() {
+                const nav = document.querySelector('nav.container');
+                if (!nav) return;
+
+                const switcher = document.createElement('div');
+                switcher.className = 'language-switcher';
+                switcher.style.cssText = 'position:relative;display:inline-block;margin-left:1rem;';
+
+                const currentBtn = document.createElement('button');
+                currentBtn.id = 'langBtn';
+                currentBtn.style.cssText = 'display:flex;align-items:center;gap:0.5rem;padding:0.5rem 1rem;background:#fff;border:2px solid #e5e7eb;border-radius:8px;cursor:pointer;font-size:0.9rem;';
+                currentBtn.innerHTML = `<span>${LANGUAGES[this.currentLang].flag}</span><span>${LANGUAGES[this.currentLang].name}</span><span style="font-size:0.7rem;">▼</span>`;
+
+                const dropdown = document.createElement('div');
+                dropdown.id = 'langDropdown';
+                dropdown.style.cssText = 'position:absolute;top:100%;left:0;right:0;background:#fff;border:2px solid #e5e7eb;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1);display:none;z-index:1000;margin-top:4px;';
+
+                Object.entries(LANGUAGES).forEach(([code, lang]) => {
+                    const option = document.createElement('button');
+                    option.style.cssText = 'display:flex;align-items:center;gap:0.5rem;width:100%;padding:0.5rem 1rem;border:none;background:none;cursor:pointer;font-size:0.9rem;';
+                    option.innerHTML = `<span>${lang.flag}</span><span>${lang.name}</span>`;
+                    option.onclick = () => this.setLanguage(code);
+                    dropdown.appendChild(option);
+                });
+
+                currentBtn.onclick = () => {
+                    dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+                };
+
+                document.onclick = (e) => {
+                    if (!switcher.contains(e.target)) {
+                        dropdown.style.display = 'none';
+                    }
+                };
+
+                switcher.appendChild(currentBtn);
+                switcher.appendChild(dropdown);
+                nav.appendChild(switcher);
+            }
+
+            setLanguage(code) {
+                this.currentLang = code;
+                localStorage.setItem('preferredLanguage', code);
+                this.updateContent();
+                this.updateSwitcher();
+                document.getElementById('langDropdown').style.display = 'none';
+            }
+
+            updateSwitcher() {
+                const btn = document.getElementById('langBtn');
+                if (btn) {
+                    btn.innerHTML = `<span>${LANGUAGES[this.currentLang].flag}</span><span>${LANGUAGES[this.currentLang].name}</span><span style="font-size:0.7rem;">▼</span>`;
+                }
+            }
+
+            updateContent() {
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (TRANSLATIONS[key] && TRANSLATIONS[key][this.currentLang]) {
+                        el.textContent = TRANSLATIONS[key][this.currentLang];
+                    }
+                });
+            }
+        }
+
+        // Initialize when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Initializing embedded i18n...');
+            window.i18n = new SimpleI18n();
+            console.log('Embedded i18n initialized successfully');
         });
     </script>
 </body>
