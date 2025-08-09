@@ -1,0 +1,35 @@
+{
+  "header": {
+    "title": "Lebenslauf Optimierer Pro",
+    "subtitle": "KI-gestützte Lebenslauf-Optimierung für Ihren Traumjob"
+  },
+  "common": {
+    "loading": "Wird geladen...",
+    "error": "Fehler",
+    "success": "Erfolg",
+    "cancel": "Abbrechen",
+    "confirm": "Bestätigen",
+    "save": "Speichern",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "close": "Schließen"
+  },
+  "navigation": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "language": "Sprache"
+  },
+  "resume": {
+    "upload": "Lebenslauf hochladen",
+    "uploadDescription": "Laden Sie Ihren Lebenslauf hoch, um zu beginnen",
+    "dragAndDrop": "Ziehen Sie Ihren Lebenslauf hierher oder klicken Sie zum Auswählen",
+    "dropFile": "Datei hier ablegen",
+    "supportedFormats": "Unterstützte Formate: PDF, DOC, DOCX",
+    "analyzing": "Ihr Lebenslauf wird analysiert...",
+    "optimizing": "Ihr Lebenslauf wird optimiert...",
+    "startAnalysis": "Analyse starten",
+    "fileFormatError": "Nicht unterstütztes Dateiformat. Bitte laden Sie PDF-, DOC- oder DOCX-Dateien hoch.",
+    "fileSizeError": "Datei zu groß. Bitte laden Sie Dateien kleiner als 10MB hoch."
+  }
+}

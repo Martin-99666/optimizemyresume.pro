@@ -1,0 +1,35 @@
+{
+  "header": {
+    "title": "OptimizeMyResume Pro",
+    "subtitle": "Optimisation de CV alimentée par l'IA pour décrocher l'emploi de vos rêves"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "close": "Fermer"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "about": "À propos",
+    "contact": "Contact",
+    "language": "Langue"
+  },
+  "resume": {
+    "upload": "Télécharger le CV",
+    "uploadDescription": "Téléchargez votre CV pour commencer",
+    "dragAndDrop": "Glissez-déposez votre CV ici ou cliquez pour sélectionner",
+    "dropFile": "Déposez votre fichier ici",
+    "supportedFormats": "Formats supportés : PDF, DOC, DOCX",
+    "analyzing": "Analyse de votre CV...",
+    "optimizing": "Optimisation de votre CV...",
+    "startAnalysis": "Commencer l'analyse",
+    "fileFormatError": "Format de fichier non supporté. Veuillez télécharger des fichiers PDF, DOC ou DOCX.",
+    "fileSizeError": "Fichier trop volumineux. Veuillez télécharger des fichiers de moins de 10MB."
+  }
+}

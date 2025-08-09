@@ -1,0 +1,35 @@
+{
+  "header": {
+    "title": "OptimizeMyResume Pro",
+    "subtitle": "Optimización de currículum impulsada por IA para conseguir el trabajo de tus sueños"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "close": "Cerrar"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "language": "Idioma"
+  },
+  "resume": {
+    "upload": "Subir currículum",
+    "uploadDescription": "Sube tu currículum para comenzar",
+    "dragAndDrop": "Arrastra tu currículum aquí o haz clic para seleccionar",
+    "dropFile": "Suelta tu archivo aquí",
+    "supportedFormats": "Formatos soportados: PDF, DOC, DOCX",
+    "analyzing": "Analizando tu currículum...",
+    "optimizing": "Optimizando tu currículum...",
+    "startAnalysis": "Iniciar análisis",
+    "fileFormatError": "Formato de archivo no soportado. Por favor sube archivos PDF, DOC o DOCX.",
+    "fileSizeError": "Archivo demasiado grande. Por favor sube archivos menores a 10MB."
+  }
+}

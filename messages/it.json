@@ -1,0 +1,35 @@
+{
+  "header": {
+    "title": "OptimizeMyResume Pro",
+    "subtitle": "Ottimizzazione del curriculum basata sull'IA per ottenere il lavoro dei tuoi sogni"
+  },
+  "common": {
+    "loading": "Caricamento...",
+    "error": "Errore",
+    "success": "Successo",
+    "cancel": "Annulla",
+    "confirm": "Conferma",
+    "save": "Salva",
+    "delete": "Elimina",
+    "edit": "Modifica",
+    "close": "Chiudi"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "Chi siamo",
+    "contact": "Contatti",
+    "language": "Lingua"
+  },
+  "resume": {
+    "upload": "Carica CV",
+    "uploadDescription": "Carica il tuo CV per iniziare",
+    "dragAndDrop": "Trascina il tuo CV qui o clicca per selezionare",
+    "dropFile": "Rilascia il file qui",
+    "supportedFormats": "Formati supportati: PDF, DOC, DOCX",
+    "analyzing": "Analisi del tuo CV...",
+    "optimizing": "Ottimizzazione del tuo CV...",
+    "startAnalysis": "Inizia analisi",
+    "fileFormatError": "Formato file non supportato. Carica file PDF, DOC o DOCX.",
+    "fileSizeError": "File troppo grande. Carica file inferiori a 10MB."
+  }
+}

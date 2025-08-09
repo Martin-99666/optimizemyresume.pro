@@ -71,3 +71,4 @@ config/secrets.*
 *.pem
 *.p12
 *.pfx
+node_modules

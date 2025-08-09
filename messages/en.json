@@ -1,0 +1,35 @@
+{
+  "header": {
+    "title": "OptimizeMyResume Pro",
+    "subtitle": "AI-powered resume optimization to help you land your dream job"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "resume": {
+    "upload": "Upload Resume",
+    "uploadDescription": "Upload your resume to get started",
+    "dragAndDrop": "Drag and drop your resume here, or click to select",
+    "dropFile": "Drop your file here",
+    "supportedFormats": "Supported formats: PDF, DOC, DOCX",
+    "analyzing": "Analyzing your resume...",
+    "optimizing": "Optimizing your resume...",
+    "startAnalysis": "Start Analysis",
+    "fileFormatError": "Unsupported file format. Please upload PDF, DOC, or DOCX files.",
+    "fileSizeError": "File size too large. Please upload files smaller than 10MB."
+  }
+}

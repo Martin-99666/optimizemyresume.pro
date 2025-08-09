@@ -1,0 +1,35 @@
+{
+  "header": {
+    "title": "简历优化专家",
+    "subtitle": "AI驱动的简历优化，助您获得理想工作"
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功",
+    "cancel": "取消",
+    "confirm": "确认",
+    "save": "保存",
+    "delete": "删除",
+    "edit": "编辑",
+    "close": "关闭"
+  },
+  "navigation": {
+    "home": "首页",
+    "about": "关于",
+    "contact": "联系我们",
+    "language": "语言"
+  },
+  "resume": {
+    "upload": "上传简历",
+    "uploadDescription": "上传您的简历开始使用",
+    "dragAndDrop": "将简历拖拽到此处，或点击选择文件",
+    "dropFile": "将文件拖拽到此处",
+    "supportedFormats": "支持格式：PDF、DOC、DOCX",
+    "analyzing": "正在分析您的简历...",
+    "optimizing": "正在优化您的简历...",
+    "startAnalysis": "开始分析",
+    "fileFormatError": "不支持的文件格式。请上传PDF、DOC或DOCX文件。",
+    "fileSizeError": "文件过大。请上传小于10MB的文件。"
+  }
+}
