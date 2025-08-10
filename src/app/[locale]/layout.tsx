@@ -1,9 +1,9 @@
-import { NextIntlClientProvider } from 'next-intl'
-import { getMessages } from 'next-intl/server'
+// import { NextIntlClientProvider } from 'next-intl'
+// import { getMessages } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { Inter } from 'next/font/google'
 import { locales, type Locale } from '@/i18n'
-import { LanguageSwitcher } from '@/components/language-switcher'
+// import { LanguageSwitcher } from '@/components/language-switcher'
 import { ErrorBoundary } from '@/components/error-boundary'
 import '../globals.css'
 
@@ -48,7 +48,7 @@ export default async function LocaleLayout({
   }
 
   // 获取翻译消息
-  const messages = await getMessages()
+  // const messages = await getMessages()
 
   return (
     <html lang={locale}>
@@ -66,18 +66,19 @@ export default async function LocaleLayout({
         />
       </head>
       <body className={inter.className}>
-        <NextIntlClientProvider messages={messages}>
+        {/* <NextIntlClientProvider messages={messages}> */}
           <ErrorBoundary>
             <div className="min-h-screen bg-background text-foreground antialiased">
               <header className="border-b">
                 <div className="container mx-auto px-4 py-4 flex justify-end items-center">
-                  <LanguageSwitcher />
+                  {/* <LanguageSwitcher /> */}
+                  <div className="text-sm text-muted-foreground">Language: {locale}</div>
                 </div>
               </header>
               <main>{children}</main>
             </div>
           </ErrorBoundary>
-        </NextIntlClientProvider>
+        {/* </NextIntlClientProvider> */}
       </body>
     </html>
   )

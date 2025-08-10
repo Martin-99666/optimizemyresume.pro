@@ -5,7 +5,6 @@ import { ErrorBoundary as ReactErrorBoundary, type FallbackProps } from 'react-e
 import { AlertCircle, RefreshCw } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { useTranslations } from 'next-intl'
 
 interface ErrorBoundaryProps {
   children: ReactNode
@@ -15,15 +14,13 @@ function ErrorFallback({
   error, 
   resetErrorBoundary 
 }: FallbackProps) {
-  const t = useTranslations('common')
-  
   const isDevelopment = process.env.NODE_ENV === 'development'
   
   return (
     <Card className="max-w-md mx-auto">
       <CardContent className="p-6 text-center">
         <AlertCircle className="h-12 w-12 text-destructive mx-auto mb-4" />
-        <h2 className="text-lg font-semibold mb-2">{t('error')}</h2>
+        <h2 className="text-lg font-semibold mb-2">Error</h2>
         <p className="text-muted-foreground mb-4">
           Something went wrong. Please try again.
         </p>
@@ -57,7 +54,7 @@ export function ErrorBoundary({ children }: ErrorBoundaryProps) {
   return (
     <ReactErrorBoundary
       FallbackComponent={ErrorFallback}
-      onError={(error: Error, errorInfo: { componentStack: string }) => {
+      onError={(error: Error, errorInfo) => {
         console.error('Error caught by boundary:', error, errorInfo)
         // Here you can add error reporting logic, e.g., send to monitoring service
       }}
