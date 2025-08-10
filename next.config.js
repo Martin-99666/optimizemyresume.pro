@@ -4,17 +4,10 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    serverActions: {
-      allowedOrigins: [
-        'localhost:3000',
-        '127.0.0.1:3000',
-        'optimizemyresume.pro',
-        'www.optimizemyresume.pro'
-      ]
-    },
-  },
+  output: 'export',
+  trailingSlash: true,
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -30,10 +23,6 @@ const nextConfig = {
         port: '3000',
       },
     ],
-  },
-  env: {
-    NEXTAUTH_URL: process.env.NEXTAUTH_URL,
-    NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
   },
 }
 
